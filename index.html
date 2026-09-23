@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kevin Ellis, Design Leadership</title>
+<style>
+:root{--bg:#f7f6f2;--ink:#1a1a1a;--muted:#5d5d58;--line:#e2e0d8;--accent:#0f4c81;--card:#ffffff;}
+@media (prefers-color-scheme: dark){:root{--bg:#131313;--ink:#ececea;--muted:#a3a39c;--line:#2a2a2a;--accent:#7fb2e6;--card:#1c1c1c;}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header.top{padding:56px 0 24px;border-bottom:1px solid var(--line)}
+header.top h1{font-size:34px;line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
+header.top p.sub{margin:0;color:var(--muted);font-size:18px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a{color:var(--muted)}nav a:hover{color:var(--ink);text-decoration:none}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+.meta{color:var(--muted);font-size:15px;margin:0 0 22px}
+h3{font-size:19px;margin:34px 0 8px}
+p{margin:0 0 14px}
+ul.plain{padding-left:20px;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.card h4{margin:0 0 6px;font-size:16px}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+figure{margin:22px 0}
+figure img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);display:block;background:var(--card)}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.slot{aspect-ratio:16/9;border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;background:var(--card)}
+.pull{border-left:3px solid var(--accent);padding:6px 16px;margin:20px 0;color:var(--ink);font-size:18px}
+.tenets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.tenets div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;font-weight:600;font-size:17px}
+footer{padding:40px 0 60px;color:var(--muted);font-size:14px}
+.stat{display:inline-block;margin:0 22px 8px 0}
+.stat b{display:block;font-size:26px;color:var(--ink)}
+/* gate */
+#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:50}
+#gate form{width:min(360px,90vw);text-align:center}
+#gate h1{font-size:22px;margin:0 0 6px}
+#gate p{color:var(--muted);font-size:15px;margin:0 0 18px}
+#gate input{width:100%;padding:12px 14px;font-size:17px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+#gate button{margin-top:10px;width:100%;padding:12px;font-size:16px;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}
+#gate .err{color:#b3261e;font-size:14px;min-height:20px;margin-top:8px}
+body.locked #site{visibility:hidden}
+</style>
+</head>
+<body class="locked">
+
+<div id="gate">
+  <form id="gateForm" autocomplete="off">
+    <h1>Kevin Ellis</h1>
+    <p>Design leadership portfolio. Enter the password from my note.</p>
+    <input id="pw" type="password" placeholder="Password" aria-label="Password" autofocus>
+    <button type="submit">Open</button>
+    <div class="err" id="err"></div>
+  </form>
+</div>
+
+<div id="site">
+<div class="wrap">
+<header class="top">
+  <h1>Kevin Ellis</h1>
+  <p class="sub">Design executive. I build design organizations, the operating models they run on, and the AI-native tooling that changes how they work.</p>
+</header>
+</div>
+
+<nav><div class="wrap"><ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#oracle">Oracle Health</a></li>
+  <li><a href="#ebay">eBay</a></li>
+  <li><a href="#photos">Amazon Photos</a></li>
+  <li><a href="#fashion">Amazon Fashion</a></li>
+  <li><a href="#earlier">Earlier Work</a></li>
+  <li><a href="#lead">How I Lead</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul></div></nav>
+
+<main class="wrap">
+
+<section id="about">
+  <h2>About</h2>
+  <p class="meta">Seattle, WA</p>
+  <figure id="headshot" style="max-width:220px"><div class="slot">headshot</div></figure>
+  <p>I grew up in Alaska drawing and painting. I studied graphic design at California College of the Arts in San Francisco, then human-computer interaction and electronic communication design at Emily Carr University in Vancouver. My first digital work was for an agency in Reykjavík, then Copenhagen, then back to San Francisco for design leadership roles at Adobe, Yahoo, Nokia, and eventually my own agency with partners in Copenhagen.</p>
+  <p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, then Oracle Health, where I built the platform design organization for the clinical products.</p>
+  <p>Twenty years of leading design teams. The pattern that holds across all of it: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>
+</section>
+
+<section id="oracle">
+  <h2>Oracle Health</h2>
+  <p class="meta">Director, User Experience Design. 2024 to present. Platform design for clinical software.</p>
+  <p>I proposed and built Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice used across Oracle Health's clinical products. It did not exist before I made the case for it. It now sets the foundational design standard for five product teams and dozens of clinician-facing applications, replacing per-team improvisation with a governed pattern library and WCAG 2.1 AA compliance.</p>
+  <p>Most of this work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</p>
+
+  <h3>From comps to rules</h3>
+  <p>When the mandate came to stop shipping Figma comps, I treated it as an operating-model problem rather than a tooling swap. We split the output in two. Components get guidelines, which are reference material a person or a model can look up. Layouts and patterns get skills, which carry the judgment about when to use something, when not to, and how to configure it. The deliverable became the rules, not the pictures. A skill selects and configures; it does not code.</p>
+  <p>I wrote the first skills myself so I understood what the toolchain actually needed, then gave each designer ownership of a pattern and its skill. The team built an internal prototyping pipeline, custom tooling, and a shared skill library in a team repo. Concept to testable prototype went from weeks to days, and the team validated considerably more concepts per cycle, internally and with customers.</p>
+  <figure><div class="slot" data-note="diagram: comps to rules, components vs patterns">diagram: guidelines vs skills</div><figcaption>Components carry guidelines. Patterns carry skills. The rule set is the deliverable.</figcaption></figure>
+
+  <h3>Four gates and a definition of done</h3>
+  <p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as four gates with a governance step at the end.</p>
+  <div class="grid">
+    <div class="card"><h4>1. Design complete</h4><p>Rules written: when to use it, when not to, configurations, and which components fill which slots.</p></div>
+    <div class="card"><h4>2. Skill validated</h4><p>Scenario-driven validation. The author never validates their own work.</p></div>
+    <div class="card"><h4>3. Foundation ready</h4><p>Components exist, accessible, responsive, published.</p></div>
+    <div class="card"><h4>4. Governance review</h4><p>Release approval by the platform leads with Dev and Product.</p></div>
+  </div>
+  <p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>
+
+  <h3>Situational awareness as a platform pattern</h3>
+  <p>I authored the platform pattern for how any user of the EHR is told that the state of the world changed: one notification object model, a five-class severity taxonomy, an interruption ladder with escalation rules, and a published boundary between three things that get confused. Situational awareness asserts facts. Guidance proposes decisions. The Action List holds work. Alarm fatigue in a clinical setting is a safety problem, so the framing started there.</p>
+</section>
+
+<section id="ebay">
+  <h2>eBay</h2>
+  <p class="meta">Director of Product Design, Seller Experience. 2022 to 2024. Team of 25 designers, 2 researchers, 2 design program managers.</p>
+  <p>I owned the seller experience end to end, web and mobile, across consumer, small business, and enterprise sellers on a marketplace running roughly $73 billion in annual GMV with 132 million active buyers. Relative to the buyer side, selling had been neglected for years, which meant the opportunity was large and the organizational habits were set.</p>
+
+  <h3>Three narratives instead of nine initiatives</h3>
+  <p>The seller roadmap arrived as nine parallel initiatives: onboarding, inventory, trust, growth, monetization, shipping, feedback, communications, regulatory. With Product and Engineering leadership we regrouped them into three narratives a seller would recognize: starting my business, running my business, growing my business. Each narrative became the context for design work and could be tailored to the segment, because starting a business as an individual seller looks nothing like starting one as a B2C brand. The narratives reshaped planning and then reshaped how the teams were organized.</p>
+  <figure><div class="slot" data-slide="15-17">deck slides 15 to 17: nine initiatives into three narratives</div><figcaption>Nine initiatives, three narratives, one lens for planning and org design.</figcaption></figure>
+
+  <h3>eBay's first generative AI feature</h3>
+  <p>Most listings on eBay had no description, and when buyers compared two similar items they almost always chose the one with a description. My team designed and shipped the Magical Listing Tool, which drafts title, description, and item specifics for sellers, end to end with eBay's AI team from concept to launch. Adoption and satisfaction were both high. It was the first of a set of tools aimed at removing the effort from listing: start from a photo, or a video with voice-over, and let the system do the rest.</p>
+  <figure><div class="slot" data-slide="19-21">deck slides 19 to 21: AI listing tools, background replace</div><figcaption>The Magical Listing Tool and the AI image tools that followed.</figcaption></figure>
+
+  <h3>The mobile seller sprint</h3>
+  <p>Small-business sellers were running their businesses on phones, and eBay's mobile selling features trailed competitors by a wide margin. SMBs were 6 percent of sellers and 42 percent of revenue. I ran one of three Lighthouse design sprints on this: cross-disciplinary teams from Product, Marketing, and Engineering through a structured discovery track, three personas plotted against their emotional and functional journeys, overlaid to find the shared territories, then concepts for each territory that graduate a seller from novice to pro. The vision was one flexible system rather than a fixed feature set, because a seller's needs change as the business grows. The concepts themselves stay internal; the method is the point.</p>
+  <p>The other change that mattered: I got Product to commit design into their six-month planning cycle, so the team shaped roadmaps before they were set instead of receiving them finished.</p>
+</section>
+
+<section id="photos">
+  <h2>Amazon Photos</h2>
+  <p class="meta">Head of Design and Research. 2019 to 2022. Mobile, web, desktop, Echo Show, Fire TV.</p>
+  <p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it. I used three tenets to name where it was failing.</p>
+  <div class="tenets">
+    <div>We will not ship our org structure.</div>
+    <div>Functional is not lovable.</div>
+    <div>We won't force our needs onto the customer.</div>
+  </div>
+  <p>Each tenet came with evidence. Screenshots taken the day before, without cherry-picking, showed headers, type, color, and illustration styles that changed from screen to screen. Screens were functional and viable and plainly not lovable. And a print-ordering link a product owner had placed in the home header had drawn almost no traffic in a year; printing wasn't in customers' top ten needs. No customer need, no reason to keep it.</p>
+  <figure><div class="slot" data-slide="87-88">deck slides 87 to 88: the before audit</div><figcaption>The audit: one app, several teams, several eras.</figcaption></figure>
+
+  <h3>Project Cooper</h3>
+  <p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
+  <figure><div class="slot" data-slide="110-114">deck slides 110 to 114: the home screen model</div><figcaption>The five needs, and the home screen that answers the first two on arrival.</figcaption></figure>
+  <p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
+  <figure><div class="slot" data-slide="124-127">deck slides 124 to 127: the shipped app</div><figcaption>Shipped: full-bleed grid, upload status, a date layer that uses depth to keep content flowing.</figcaption></figure>
+  <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch, still climbing as post-launch features shipped</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>
+  <p>One detail I care about: the illustration. We wanted a voice that contrasted with photo content and avoided the generic vector style on every other app. A designer found Lynn Scurfield's work in the New York Times, warmer and more organic, and we commissioned her.</p>
+  <figure><div class="slot" data-slide="116-118">deck slides 116 to 118: illustration</div><figcaption>Illustration by Lynn Scurfield.</figcaption></figure>
+</section>
+
+<section id="fashion">
+  <h2>Amazon Fashion</h2>
+  <p class="meta">Head of Design and Research. 2015 to 2019. Grew the org from 5 designers and 2 researchers to 20.</p>
+  <p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point. Prime Wardrobe, then called Prime Try Before You Buy, took aim at it.</p>
+
+  <h3>Prime Wardrobe</h3>
+  <p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>
+  <figure><div class="slot" data-slide="75-76">deck slides 75 to 76: the box</div><figcaption>The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count.</figcaption></figure>
+
+  <h3>Luxury Stores</h3>
+  <p>The last project I led there was the luxury brands exploration: a walled garden inside the Amazon app where only the most exclusive fashion brands could be bought, with minimal store presence and the content carrying the experience. No legacy to design around. It launched more than two years after we designed it, and looked remarkably like the original work.</p>
+  <figure><div class="slot" data-slide="79">deck slide 79: Luxury Stores</div><figcaption>Luxury Stores, as designed and as launched.</figcaption></figure>
+
+  <h3>The detail page, as a lesson</h3>
+  <p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon. Four designers and one researcher were promoted from L5 to L6 during my tenure.</p>
+</section>
+
+<section id="earlier">
+  <h2>Earlier Work</h2>
+  <p class="meta">2006 to 2015. Adobe, Nokia, THANK YOU Studio.</p>
+  <div class="grid">
+    <div class="card"><h4>THANK YOU Studio, 2012 to 2015</h4><p>Partner and VP of Product Design. Studios in San Francisco and Copenhagen. Reimagined Toyota's in-vehicle navigation system. Delivered the UX for Amazon's first Fire tablets and concept directions for the Fire Phone. Proof-of-concept work for Toyota, Amazon, Adobe, and other enterprise clients.</p></div>
+    <div class="card"><h4>Nokia, 2009 to 2012</h4><p>Director of UX Design. Owned mobile application design strategy across teams in San Francisco, Boston, Montreal, Oulu, and Helsinki, shipping for Symbian and MeeGo.</p></div>
+    <div class="card"><h4>Adobe, 2006 to 2009</h4><p>Creative Director. Led the redesign of Adobe.com and the digital experience behind dozens of Creative Suite launches.</p></div>
+  </div>
+  <figure><div class="slot" data-note="earlier work images, if any">earlier work images</div></figure>
+</section>
+
+<section id="lead">
+  <h2>How I Lead</h2>
+  <p>Design is a business capability, and it earns that standing by being legible to the rest of the company. At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>
+  <figure><div class="slot" data-slide="133-134">deck slides 133 to 134: Design Quarterly</div><figcaption>Design Quarterly, and the Cope and Hope issue.</figcaption></figure>
+  <p>The operating habits that travel with me: tenets set with partners at the start so the argument happens once; a written definition of done; a weekly written note that ends up read beyond its intended audience; ownership assigned by pattern so every designer has something that is theirs; and staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><a href="mailto:kevinellis@gmail.com">kevinellis@gmail.com</a> · (415) 606-1720 · <a href="https://www.linkedin.com/in/kevinellis" rel="noopener">LinkedIn</a></p>
+  <p class="meta">Oracle Health material is described at the level of method and structure. Unreleased designs, customer names, and internal data are deliberately excluded.</p>
+</section>
+
+</main>
+<footer class="wrap">Kevin Ellis, 2026.</footer>
+</div>
+
+<script>
+(async function(){
+  const H='c485ef4fb737514123b0e48a447f351744f4a5f166415aeb29fddb048cf2076b';
+  const gate=document.getElementById('gate'), body=document.body;
+  function open(){gate.remove();body.classList.remove('locked');}
+  try{ if(sessionStorage.getItem('ok')==='1'){open();return;} }catch(e){}
+  async function sha(s){const b=new TextEncoder().encode(s);const d=await crypto.subtle.digest('SHA-256',b);return [...new Uint8Array(d)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+  document.getElementById('gateForm').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const v=document.getElementById('pw').value.trim().toLowerCase();
+    if(await sha(v)===H){ try{sessionStorage.setItem('ok','1');}catch(e){} open(); }
+    else{ document.getElementById('err').textContent='Not it. Check the note.'; }
+  });
+})();
+</script>
+</body>
+</html>
