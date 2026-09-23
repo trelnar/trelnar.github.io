@@ -1,0 +1,149 @@
+import os
+def shell(title, body, on, depth=0, wide=False):
+    r = "../" if depth else ""
+    ON=' class="on"'
+    nav = "".join(f'<li><a href="{r}{h}"{ON if k==on else ""}>{t}</a></li>' for k,h,t in
+        [("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")])
+    return f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>{title}</title>
+<link rel="stylesheet" href="{r}css/site.css"></head>
+<body class="locked"><div id="site">
+<div class="wrap"><header class="top"><a class="brand" href="{r}index.html">Kevin Ellis</a><nav><ul>{nav}</ul></nav></header></div>
+{body}
+<footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
+</div><script src="{r}js/gate.js"></script></body></html>'''
+
+def case(title, lede, year, hero, sections, prev, nxt):
+    body = f'<div class="narrow"><article class="case"><h1>{title}</h1><p class="lede">{lede}</p><p class="year">{year}</p></article></div>\n'
+    body += f'<figure class="wide hero"><img src="../img/tiles/{hero}.jpg" alt=""><figcaption>Placeholder. Final image to come.</figcaption></figure>\n'
+    body += '<div class="narrow">' + sections + f'<div class="next"><a href="{prev[0]}">&larr; {prev[1]}</a><a href="{nxt[0]}">{nxt[1]} &rarr;</a></div></div>\n'
+    return body
+
+def slot(label, cap=""):
+    return f'<figure><div class="slot">{label}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+
+pages = {}
+
+tiles = [("oracle","Oracle Health"),("ebay","eBay"),("photos","Amazon Photos"),("fashion","Amazon Fashion"),("earlier","Earlier Work"),("quarterly","Design Quarterly")]
+grid = '<div class="wrap"><div class="tiles">' + "".join(
+    f'<a class="tile" href="{"leadership.html" if k=="quarterly" else "work/"+k+".html"}"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles) + '</div></div>'
+pages["index.html"] = shell("Kevin Ellis, Design Leadership", grid, "work")
+
+pages["work/oracle.html"] = shell("Oracle Health", case("Oracle Health",
+ "Director, User Experience Design. I proposed and built Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice across Oracle Health's clinical products. It did not exist before I made the case for it. It now sets the design standard for five product teams and dozens of clinician-facing applications. Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.",
+ "2024 to present", "oracle", '''
+<h2>From comps to rules</h2>
+<p>When the mandate came to stop shipping Figma comps, I treated it as an operating-model problem rather than a tooling swap. We split the output in two. Components get guidelines, which are reference material a person or a model can look up. Layouts and patterns get skills, which carry the judgment about when to use something, when not to, and how to configure it. The deliverable became the rules, not the pictures. A skill selects and configures; it does not code.</p>
+<p>I wrote the first skills myself so I understood what the toolchain actually needed, then gave each designer ownership of a pattern and its skill. The team built an internal prototyping pipeline, custom tooling, and a shared skill library in a team repo. Concept to testable prototype went from weeks to days, and the team validated considerably more concepts per cycle, internally and with customers.</p>
+''' + slot("diagram: guidelines vs skills","Components carry guidelines. Patterns carry skills. The rule set is the deliverable.") + '''
+<h2>Four gates and a definition of done</h2>
+<p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as four gates with a governance step at the end.</p>
+<div class="grid">
+<div class="card"><h4>1. Design complete</h4><p>Rules written: when to use it, when not to, configurations, and which components fill which slots.</p></div>
+<div class="card"><h4>2. Skill validated</h4><p>Scenario-driven validation. The author never validates their own work.</p></div>
+<div class="card"><h4>3. Foundation ready</h4><p>Components exist, accessible, responsive, published.</p></div>
+<div class="card"><h4>4. Governance review</h4><p>Release approval by the platform leads with Dev and Product.</p></div>
+</div>
+<p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>
+<h2>Situational awareness as a platform pattern</h2>
+<p>I authored the platform pattern for how any user of the EHR is told that the state of the world changed: one notification object model, a five-class severity taxonomy, an interruption ladder with escalation rules, and a published boundary between three things that get confused. Situational awareness asserts facts. Guidance proposes decisions. The Action List holds work. Alarm fatigue in a clinical setting is a safety problem, so the framing started there.</p>
+''', ("../index.html","Work"), ("ebay.html","eBay")), "work", 1)
+
+pages["work/ebay.html"] = shell("eBay", case("eBay",
+ "Director of Product Design, Seller Experience. Team of 25 designers, 2 researchers, 2 design program managers. I owned the seller experience end to end, web and mobile, across consumer, small business, and enterprise sellers on a marketplace running roughly $73 billion in annual GMV with 132 million active buyers. Relative to the buyer side, selling had been neglected for years, which meant the opportunity was large and the organizational habits were set.",
+ "2022 to 2024", "ebay", '''
+<h2>Three narratives instead of nine initiatives</h2>
+<p>The seller roadmap arrived as nine parallel initiatives: onboarding, inventory, trust, growth, monetization, shipping, feedback, communications, regulatory. With Product and Engineering leadership we regrouped them into three narratives a seller would recognize: starting my business, running my business, growing my business. Each narrative became the context for design work and could be tailored to the segment, because starting a business as an individual seller looks nothing like starting one as a B2C brand. The narratives reshaped planning and then reshaped how the teams were organized.</p>
+''' + slot("deck slides 15 to 17","Nine initiatives, three narratives, one lens for planning and org design.") + '''
+<h2>eBay's first generative AI feature</h2>
+<p>Most listings on eBay had no description, and when buyers compared two similar items they almost always chose the one with a description. My team designed and shipped the Magical Listing Tool, which drafts title, description, and item specifics for sellers, end to end with eBay's AI team from concept to launch. Adoption and satisfaction were both high. It was the first of a set of tools aimed at removing the effort from listing: start from a photo, or a video with voice-over, and let the system do the rest.</p>
+''' + slot("deck slides 19 to 21","The Magical Listing Tool and the AI image tools that followed.") + '''
+<h2>The mobile seller sprint</h2>
+<p>Small-business sellers were running their businesses on phones, and eBay's mobile selling features trailed competitors by a wide margin. SMBs were 6 percent of sellers and 42 percent of revenue. I ran one of three Lighthouse design sprints on this: cross-disciplinary teams from Product, Marketing, and Engineering through a structured discovery track, three personas plotted against their emotional and functional journeys, overlaid to find the shared territories, then concepts for each territory that graduate a seller from novice to pro. The vision was one flexible system rather than a fixed feature set, because a seller's needs change as the business grows. The concepts themselves stay internal; the method is the point.</p>
+<p>The other change that mattered: I got Product to commit design into their six-month planning cycle, so the team shaped roadmaps before they were set instead of receiving them finished.</p>
+''', ("oracle.html","Oracle Health"), ("photos.html","Amazon Photos")), "work", 1)
+
+pages["work/photos.html"] = shell("Amazon Photos", case("Amazon Photos",
+ "Head of Design and Research. Mobile, web, desktop, Echo Show, Fire TV. Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.",
+ "2019 to 2022", "photos", '''
+<h2>Three tenets</h2>
+<div class="tenets"><div>We will not ship our org structure.</div><div>Functional is not lovable.</div><div>We won't force our needs onto the customer.</div></div>
+<p>Each tenet came with evidence. Screenshots taken the day before, without cherry-picking, showed headers, type, color, and illustration styles that changed from screen to screen. Screens were functional and viable and plainly not lovable. And a print-ordering link a product owner had placed in the home header had drawn almost no traffic in a year; printing wasn't in customers' top ten needs. No customer need, no reason to keep it.</p>
+''' + slot("deck slides 87 to 88","The audit: one app, several teams, several eras.") + '''
+<h2>Project Cooper</h2>
+<p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
+''' + slot("deck slides 110 to 114","The five needs, and the home screen that answers the first two on arrival.") + '''
+<p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
+''' + slot("deck slides 124 to 127","Shipped: full-bleed grid, upload status, a date layer that uses depth to keep content flowing.") + '''
+<p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>
+<h2>Illustration</h2>
+<p>We wanted a voice that contrasted with photo content and avoided the generic vector style on every other app. A designer found Lynn Scurfield's work in the New York Times, warmer and more organic, and we commissioned her.</p>
+''' + slot("deck slides 116 to 118","Illustration by Lynn Scurfield."), ("ebay.html","eBay"), ("fashion.html","Amazon Fashion")), "work", 1)
+
+pages["work/fashion.html"] = shell("Amazon Fashion", case("Amazon Fashion",
+ "Head of Design and Research. Grew the org from 5 designers and 2 researchers to 20. In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point.",
+ "2015 to 2019", "fashion", '''
+<h2>Prime Wardrobe</h2>
+<p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>
+''' + slot("deck slides 75 to 76","The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count.") + '''
+<h2>Luxury Stores</h2>
+<p>The last project I led there was the luxury brands exploration: a walled garden inside the Amazon app where only the most exclusive fashion brands could be bought, with minimal store presence and the content carrying the experience. No legacy to design around. It launched more than two years after we designed it, and looked remarkably like the original work.</p>
+''' + slot("deck slide 79","Luxury Stores, as designed and as launched.") + '''
+<h2>The detail page, as a lesson</h2>
+<p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon. Four designers and one researcher were promoted from L5 to L6 during my tenure.</p>
+''', ("photos.html","Amazon Photos"), ("earlier.html","Earlier Work")), "work", 1)
+
+pages["work/earlier.html"] = shell("Earlier Work", case("Earlier Work",
+ "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
+ "2006 to 2015", "earlier", '''
+<h2>THANK YOU Studio, 2012 to 2015</h2>
+<p>Partner and VP of Product Design. Studios in San Francisco and Copenhagen. Reimagined Toyota's in-vehicle navigation system. Delivered the UX for Amazon's first Fire tablets and concept directions for the Fire Phone. Proof-of-concept work for Toyota, Amazon, Adobe, and other enterprise clients.</p>
+''' + slot("THANK YOU images") + '''
+<h2>Nokia, 2009 to 2012</h2>
+<p>Director of UX Design. Owned mobile application design strategy across teams in San Francisco, Boston, Montreal, Oulu, and Helsinki, shipping for Symbian and MeeGo.</p>
+''' + slot("Nokia images") + '''
+<h2>Adobe, 2006 to 2009</h2>
+<p>Creative Director. Led the redesign of Adobe.com and the digital experience behind dozens of Creative Suite launches.</p>
+''' + slot("Adobe images"), ("fashion.html","Amazon Fashion"), ("../leadership.html","Leadership")), "work", 1)
+
+pages["leadership.html"] = shell("How I Lead", '''
+<div class="narrow"><article class="case"><h1>How I Lead</h1>
+<p class="lede">Design is a business capability, and it earns that standing by being legible to the rest of the company.</p></article>
+<h2>Design Quarterly</h2>
+<p>At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>
+</div>
+<figure class="wide"><img src="img/tiles/quarterly.jpg" alt=""><figcaption>Placeholder. Deck slides 133 to 134: Design Quarterly, and the Cope and Hope issue.</figcaption></figure>
+<div class="narrow">
+<h2>Operating habits</h2>
+<ul>
+<li>Tenets set with partners at the start, so the argument happens once.</li>
+<li>A written definition of done.</li>
+<li>A weekly written note that ends up read beyond its intended audience.</li>
+<li>Ownership assigned by pattern, so every designer has something that is theirs.</li>
+<li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
+</ul>
+<h2>Building the org</h2>
+<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 15, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>
+</div>''', "lead")
+
+pages["about.html"] = shell("About", '''
+<div class="narrow"><article class="case"><h1>About</h1></article>
+<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">
+<p>I grew up in Alaska drawing and painting. I studied graphic design at California College of the Arts in San Francisco, then human-computer interaction and electronic communication design at Emily Carr University in Vancouver. My first digital work was for an agency in Reykjav&iacute;k, then Copenhagen, then back to San Francisco for design leadership roles at Adobe, Yahoo, Nokia, and eventually my own agency with partners in Copenhagen.</p>
+<p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, then Oracle Health, where I built the platform design organization for the clinical products.</p>
+<p>Twenty years of leading design teams. I build design organizations, the operating models they run on, and the AI-native tooling that changes how they work.</p>
+<p class="meta">Seattle, WA</p>
+</div>''', "about")
+
+pages["contact.html"] = shell("Contact", '''
+<div class="narrow"><article class="case"><h1>Contact</h1></article>
+<p><a href="mailto:kevinellis@gmail.com">kevinellis@gmail.com</a></p>
+<p>(415) 606-1720</p>
+<p><a href="https://www.linkedin.com/in/kevinellis" rel="noopener">linkedin.com/in/kevinellis</a></p>
+</div>''', "contact")
+
+for path, html in pages.items():
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    open(path, "w").write(html)
+print(len(pages), "pages")
