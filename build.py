@@ -105,7 +105,7 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
  "2006 to 2015","earlier",[
- (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,6)],"Kindle Fire HD launch site, Amazon, 2012."),
+ (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,14)],"Kindle Fire HD launch site, Amazon, 2012."),
   '''<h2>THANK YOU Studio, 2012 to 2015</h2>
 <p>Partner and VP of Product Design. Studios in San Francisco and Copenhagen. Reimagined Toyota's in-vehicle navigation system. Delivered the UX for Amazon's first Fire tablets and concept directions for the Fire Phone. Proof-of-concept work for Toyota, Amazon, Adobe, and other enterprise clients.</p>'''),
  (slot("Nokia images"),
