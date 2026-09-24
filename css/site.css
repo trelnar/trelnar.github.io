@@ -40,7 +40,9 @@ footer{padding:48px 24px 60px;color:var(--muted);font-size:13px;text-align:cente
 body.locked #site{visibility:hidden}
 
 /* dark landing */
-body.dark{background:#000;color:#fff}
+html:has(body.dark){background:#000}
+body.dark{background:#000;color:#fff;min-height:100vh}
+body.dark #gate{background:#000;color:#fff}body.dark #gate p{color:#9a9a9a}body.dark #gate input{background:#151515;border-color:#333;color:#fff}
 body.dark header.top .brand{color:#fff}
 body.dark header.top nav a{color:#9a9a9a}body.dark header.top nav a:hover,body.dark header.top nav a.on{color:#fff}
 body.dark footer{color:#8a8a8a}
