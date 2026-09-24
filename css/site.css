@@ -10,13 +10,12 @@ header.top .brand{font-weight:700;letter-spacing:.06em;font-size:16px;color:var(
 header.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 header.top nav a{color:var(--muted)}header.top nav a:hover,header.top nav a.on{color:var(--ink);text-decoration:none}
 @media (max-width:640px){header.top{flex-direction:column;align-items:flex-start;gap:12px}header.top nav ul{gap:14px;flex-wrap:wrap}}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0 40px}
-@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:8px 0 40px}
 @media (max-width:560px){.tiles{grid-template-columns:1fr}}
-.tile{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--card)}
-.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.tile:hover img{transform:scale(1.03)}
-.tile span{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:14px;letter-spacing:.04em;opacity:0;transition:opacity .3s}
+.tile{position:relative;display:block;aspect-ratio:2/1;overflow:hidden;background:var(--card)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:filter .35s ease,transform .35s ease}
+.tile:hover img{filter:blur(14px) brightness(.45);transform:scale(1.06)}
+.tile span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font:300 clamp(28px,3.4vw,48px)/1.1 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;opacity:0;transition:opacity .35s;pointer-events:none}
 .tile:hover span{opacity:1}
 article.case{padding:48px 0 0}
 article.case h1{font-family:Georgia,"Times New Roman",serif;font-size:52px;line-height:1.05;margin:0 0 18px;letter-spacing:-.01em}

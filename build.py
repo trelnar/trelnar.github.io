@@ -25,9 +25,9 @@ def slot(label, cap=""):
 
 pages = {}
 
-tiles = [("oracle","Oracle Health"),("ebay","eBay"),("photos","Amazon Photos"),("fashion","Amazon Fashion"),("earlier","Earlier Work"),("quarterly","Design Quarterly")]
+tiles = [("oracle","Oracle Health"),("amazon","Amazon"),("ebay","eBay"),("earlier","Earlier Work")]
 grid = '<div class="wrap"><div class="tiles">' + "".join(
-    f'<a class="tile" href="{"leadership.html" if k=="quarterly" else "work/"+k+".html"}"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles) + '</div></div>'
+    f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles) + '</div></div>'
 pages["index.html"] = shell("Kevin Ellis, Design Leadership", grid, "work")
 
 pages["work/oracle.html"] = shell("Oracle Health", case("Oracle Health",
@@ -48,7 +48,7 @@ pages["work/oracle.html"] = shell("Oracle Health", case("Oracle Health",
 <p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>
 <h2>Situational awareness as a platform pattern</h2>
 <p>I authored the platform pattern for how any user of the EHR is told that the state of the world changed: one notification object model, a five-class severity taxonomy, an interruption ladder with escalation rules, and a published boundary between three things that get confused. Situational awareness asserts facts. Guidance proposes decisions. The Action List holds work. Alarm fatigue in a clinical setting is a safety problem, so the framing started there.</p>
-''', ("../index.html","Work"), ("ebay.html","eBay")), "work", 1)
+''', ("../index.html","Work"), ("amazon.html","Amazon")), "work", 1)
 
 pages["work/ebay.html"] = shell("eBay", case("eBay",
  "Director of Product Design, Seller Experience. Team of 25 designers, 2 researchers, 2 design program managers. I owned the seller experience end to end, web and mobile, across consumer, small business, and enterprise sellers on a marketplace running roughly $73 billion in annual GMV with 132 million active buyers. Relative to the buyer side, selling had been neglected for years, which meant the opportunity was large and the organizational habits were set.",
@@ -62,11 +62,14 @@ pages["work/ebay.html"] = shell("eBay", case("eBay",
 <h2>The mobile seller sprint</h2>
 <p>Small-business sellers were running their businesses on phones, and eBay's mobile selling features trailed competitors by a wide margin. SMBs were 6 percent of sellers and 42 percent of revenue. I ran one of three Lighthouse design sprints on this: cross-disciplinary teams from Product, Marketing, and Engineering through a structured discovery track, three personas plotted against their emotional and functional journeys, overlaid to find the shared territories, then concepts for each territory that graduate a seller from novice to pro. The vision was one flexible system rather than a fixed feature set, because a seller's needs change as the business grows. The concepts themselves stay internal; the method is the point.</p>
 <p>The other change that mattered: I got Product to commit design into their six-month planning cycle, so the team shaped roadmaps before they were set instead of receiving them finished.</p>
-''', ("oracle.html","Oracle Health"), ("photos.html","Amazon Photos")), "work", 1)
+''', ("amazon.html","Amazon"), ("earlier.html","Earlier Work")), "work", 1)
 
-pages["work/photos.html"] = shell("Amazon Photos", case("Amazon Photos",
- "Head of Design and Research. Mobile, web, desktop, Echo Show, Fire TV. Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.",
- "2019 to 2022", "photos", '''
+pages["work/amazon.html"] = shell("Amazon", case("Amazon",
+ "Seven years, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Then Head of Design and Research for Amazon Photos, 2019 to 2022, across mobile, web, desktop, Echo Show, and Fire TV.",
+ "2015 to 2022", "amazon", '''
+<h2 style="font-size:32px;margin-top:8px">Amazon Photos, 2019 to 2022</h2>
+<p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.</p>
+
 <h2>Three tenets</h2>
 <div class="tenets"><div>We will not ship our org structure.</div><div>Functional is not lovable.</div><div>We won't force our needs onto the customer.</div></div>
 <p>Each tenet came with evidence. Screenshots taken the day before, without cherry-picking, showed headers, type, color, and illustration styles that changed from screen to screen. Screens were functional and viable and plainly not lovable. And a print-ordering link a product owner had placed in the home header had drawn almost no traffic in a year; printing wasn't in customers' top ten needs. No customer need, no reason to keep it.</p>
@@ -79,11 +82,10 @@ pages["work/photos.html"] = shell("Amazon Photos", case("Amazon Photos",
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>
 <h2>Illustration</h2>
 <p>We wanted a voice that contrasted with photo content and avoided the generic vector style on every other app. A designer found Lynn Scurfield's work in the New York Times, warmer and more organic, and we commissioned her.</p>
-''' + slot("deck slides 116 to 118","Illustration by Lynn Scurfield."), ("ebay.html","eBay"), ("fashion.html","Amazon Fashion")), "work", 1)
+''' + slot("deck slides 116 to 118","Illustration by Lynn Scurfield.") + '''
+<h2 style="font-size:32px;margin-top:64px">Amazon Fashion, 2015 to 2019</h2>
+<p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point.</p>
 
-pages["work/fashion.html"] = shell("Amazon Fashion", case("Amazon Fashion",
- "Head of Design and Research. Grew the org from 5 designers and 2 researchers to 20. In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point.",
- "2015 to 2019", "fashion", '''
 <h2>Prime Wardrobe</h2>
 <p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>
 ''' + slot("deck slides 75 to 76","The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count.") + '''
@@ -92,7 +94,7 @@ pages["work/fashion.html"] = shell("Amazon Fashion", case("Amazon Fashion",
 ''' + slot("deck slide 79","Luxury Stores, as designed and as launched.") + '''
 <h2>The detail page, as a lesson</h2>
 <p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon. Four designers and one researcher were promoted from L5 to L6 during my tenure.</p>
-''', ("photos.html","Amazon Photos"), ("earlier.html","Earlier Work")), "work", 1)
+''', ("oracle.html","Oracle Health"), ("ebay.html","eBay")), "work", 1)
 
 pages["work/earlier.html"] = shell("Earlier Work", case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
@@ -105,16 +107,14 @@ pages["work/earlier.html"] = shell("Earlier Work", case("Earlier Work",
 ''' + slot("Nokia images") + '''
 <h2>Adobe, 2006 to 2009</h2>
 <p>Creative Director. Led the redesign of Adobe.com and the digital experience behind dozens of Creative Suite launches.</p>
-''' + slot("Adobe images"), ("fashion.html","Amazon Fashion"), ("../leadership.html","Leadership")), "work", 1)
+''' + slot("Adobe images"), ("ebay.html","eBay"), ("../leadership.html","Leadership")), "work", 1)
 
 pages["leadership.html"] = shell("How I Lead", '''
 <div class="narrow"><article class="case"><h1>How I Lead</h1>
 <p class="lede">Design is a business capability, and it earns that standing by being legible to the rest of the company.</p></article>
 <h2>Design Quarterly</h2>
 <p>At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>
-</div>
-<figure class="wide"><img src="img/tiles/quarterly.jpg" alt=""><figcaption>Placeholder. Deck slides 133 to 134: Design Quarterly, and the Cope and Hope issue.</figcaption></figure>
-<div class="narrow">
+<figure><div class="slot">deck slides 133 to 134</div><figcaption>Design Quarterly, and the Cope and Hope issue.</figcaption></figure>
 <h2>Operating habits</h2>
 <ul>
 <li>Tenets set with partners at the start, so the argument happens once.</li>
