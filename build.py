@@ -11,12 +11,16 @@ def shell(title, body, on, depth=0, dark=False):
 <div class="wrap"><header class="top"><a class="brand" href="{r}index.html">Kevin Ellis</a><nav><ul>{nav}</ul></nav></header></div>
 {body}
 <footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
-</div><script src="{r}js/gate.js"></script></body></html>'''
+</div><script src="{r}js/gate.js"></script><script src="{r}js/slides.js"></script></body></html>'''
 
 def img(src, cap=""):
     return f'<figure><img src="{src}" alt="">{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slot(label, cap=""):
     return f'<figure><div class="slot">{label}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def slides(srcs, cap=""):
+    ON=' class="on"'
+    imgs="".join(f'<img src="{x}" alt=""{ON if i==0 else ""}>' for i,x in enumerate(srcs))
+    return f'<figure><div class="slides" style="aspect-ratio:1024/668">{imgs}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
@@ -101,7 +105,7 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
  "2006 to 2015","earlier",[
- (slot("THANK YOU images: Toyota navigation, Fire tablets"),
+ (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,6)],"Kindle Fire HD launch site, Amazon, 2012."),
   '''<h2>THANK YOU Studio, 2012 to 2015</h2>
 <p>Partner and VP of Product Design. Studios in San Francisco and Copenhagen. Reimagined Toyota's in-vehicle navigation system. Delivered the UX for Amazon's first Fire tablets and concept directions for the Fire Phone. Proof-of-concept work for Toyota, Amazon, Adobe, and other enterprise clients.</p>'''),
  (slot("Nokia images"),
