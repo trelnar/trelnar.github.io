@@ -106,7 +106,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
  "2006 to 2015","earlier",[
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,14)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
- (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Home as three views, lock screen, and the icon system. Nokia, 2009 to 2012."),""),
+ (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Our team focused on the MeeGo OS design system, as well as 3rd-party app guidelines."),""),
  (slot("Adobe images"),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership")),"work",1)
 
