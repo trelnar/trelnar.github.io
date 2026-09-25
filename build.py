@@ -1,4 +1,5 @@
-import os
+import os, time
+V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
     r="../" if depth else ""; ON=' class="on"'
@@ -6,12 +7,12 @@ def shell(title, body, on, depth=0, dark=False):
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>{title}</title>
-<link rel="stylesheet" href="{r}css/site.css"></head>
+<link rel="stylesheet" href="{r}css/site.css?v={V}"></head>
 <body class="locked{' dark' if dark else ''}"><div id="site">
 <div class="wrap"><header class="top"><a class="brand" href="{r}index.html">Kevin Ellis</a><nav><ul>{nav}</ul></nav></header></div>
 {body}
 <footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
-</div><script src="{r}js/gate.js"></script><script src="{r}js/slides.js"></script><script src="{r}js/video.js"></script></body></html>'''
+</div><script src="{r}js/gate.js?v={V}"></script><script src="{r}js/slides.js?v={V}"></script><script src="{r}js/video.js?v={V}"></script></body></html>'''
 
 def img(src, cap=""):
     return f'<figure><img src="{src}" alt="">{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
