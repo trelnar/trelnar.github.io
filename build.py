@@ -75,7 +75,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>'''),
  (slot("deck slides 75 to 76","The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count."),
-  '''<h2 class="part">Amazon Fashion, 2015 to 2019</h2>
+  '''<h2 class="part">Amazon Fashion</h2>
 <p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point. Prime Wardrobe, then called Prime Try Before You Buy, took aim at it.</p>
 <h3>Prime Wardrobe</h3>
 <p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>'''),
