@@ -67,16 +67,13 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
  "Seven years, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Then Head of Design and Research for Amazon Photos, 2019 to 2022, across mobile, web, desktop, Echo Show, and Fire TV.",
  "2015 to 2022","amazon",[
  (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=404)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
-  '''<h2 class="part">Amazon Photos, 2019 to 2022</h2>
+  '''<h2 class="part">Amazon Photos</h2>
 <p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.</p>
 <h3>Project Cooper</h3>
 <p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
 <p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>'''),
- (slot("deck slides 116 to 118","Illustration by Lynn Scurfield."),
-  '''<h2>Illustration</h2>
-<p>We wanted a voice that contrasted with photo content and avoided the generic vector style on every other app. A designer found Lynn Scurfield's work in the New York Times, warmer and more organic, and we commissioned her.</p>'''),
  (slot("deck slides 75 to 76","The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count."),
   '''<h2 class="part">Amazon Fashion, 2015 to 2019</h2>
 <p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point. Prime Wardrobe, then called Prime Try Before You Buy, took aim at it.</p>
