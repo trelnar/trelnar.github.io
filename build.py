@@ -71,9 +71,8 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.</p>
 <h3>Project Cooper</h3>
 <p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
-<p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>'''),
- (slot("deck slides 124 to 127","Shipped: full-bleed grid, upload status, a date layer that uses depth to keep content flowing."),
-  '''<h2>Shipped</h2>
+<p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
+<h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>'''),
  (slot("deck slides 116 to 118","Illustration by Lynn Scurfield."),
   '''<h2>Illustration</h2>
