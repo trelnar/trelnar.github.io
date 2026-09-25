@@ -34,7 +34,7 @@ def row(left, right, cls=""):
 def case(title, lede, year, hero, rows, prev, nxt):
     head=f'<h1>{title}</h1><p class="lede">{lede}</p><p class="year">{year}</p>'
     body='<article class="case wrap">'+row(img(f"../img/tiles/{hero}.jpg"), head, "head")
-    for left,right in rows: body+=row(left,right)
+    for left,right in rows: body+=row(left,right,"" if right else "gallery")
     body+=f'<div class="next"><a href="{prev[0]}">&larr; {prev[1]}</a><a href="{nxt[0]}">{nxt[1]} &rarr;</a></div></article>\n'
     return body
 
@@ -105,15 +105,9 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
  "2006 to 2015","earlier",[
- (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,14)],"Kindle Fire HD launch site, Amazon, 2012."),
-  '''<h2>THANK YOU Studio, 2012 to 2015</h2>
-<p>Partner and VP of Product Design. Studios in San Francisco and Copenhagen. Reimagined Toyota's in-vehicle navigation system. Delivered the UX for Amazon's first Fire tablets and concept directions for the Fire Phone. Proof-of-concept work for Toyota, Amazon, Adobe, and other enterprise clients.</p>'''),
- (slot("Nokia images"),
-  '''<h2>Nokia, 2009 to 2012</h2>
-<p>Director of UX Design. Owned mobile application design strategy across teams in San Francisco, Boston, Montreal, Oulu, and Helsinki, shipping for Symbian and MeeGo.</p>'''),
- (slot("Adobe images"),
-  '''<h2>Adobe, 2006 to 2009</h2>
-<p>Creative Director. Led the redesign of Adobe.com and the digital experience behind dozens of Creative Suite launches.</p>'''),
+ (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,14)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
+ (slot("Nokia images"),""),
+ (slot("Adobe images"),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership")),"work",1)
 
 pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+row(

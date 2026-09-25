@@ -72,3 +72,6 @@ figure video{width:100%;height:auto;display:block;background:#f5f4f0}
 .vid .play::after{content:"";position:absolute;left:29px;top:22px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent rgba(255,255,255,.9)}
 .vid:hover .play{background:rgba(0,0,0,.45)}
 .vid.playing .play{opacity:0;pointer-events:none}
+.row.gallery{grid-template-columns:1fr;border-top:0;padding:8px 0 24px}
+.row.gallery .col-img{position:static}
+.row.gallery .col-text{display:none}
