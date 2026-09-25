@@ -23,7 +23,7 @@ def slides(srcs, cap=""):
     imgs="".join(f'<img src="{x}" alt=""{ON if i==0 else ""}>' for i,x in enumerate(srcs))
     return f'<figure><div class="slides" style="aspect-ratio:1024/668">{imgs}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def video(src, poster, cap="", controls=False, loop=True, maxw=None):
-    st = f' style="max-width:{maxw}px"' if maxw else ""
+    st = f' style="max-width:{maxw}px;margin-left:auto"' if maxw else ""
     if loop:
         attrs = "autoplay muted loop playsinline" + (" controls" if controls else "")
         return f'<figure{st}><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
@@ -125,7 +125,7 @@ pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+ro
 <li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
 </ul>
 <h2>Building the org</h2>
-<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 15, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At the largest, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>
+<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 15, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At Nokia, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>
 <div class="quad">
 <figure><img src="img/lead/birthday.jpg" alt=""><figcaption>Birthday tradition: everyone dresses as the birthday person.</figcaption></figure>
 <figure><img src="img/lead/ebay-offsite.jpg" alt=""><figcaption>Seller experience offsite at eBay.</figcaption></figure>
