@@ -29,6 +29,7 @@ def video(src, poster, cap="", controls=False, loop=True, maxw=None):
         return f'<figure{st}><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
     return f'<figure{st}><div class="vid"><video src="{src}" poster="{poster}" playsinline preload="metadata"></video><button class="play" aria-label="Play"></button></div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
+    if not left: cls=(cls+" textonly").strip()
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
 def case(title, lede, year, hero, rows, prev, nxt, herocap=""):

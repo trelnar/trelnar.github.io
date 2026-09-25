@@ -75,3 +75,4 @@ figure video{width:100%;height:auto;display:block;background:#f5f4f0}
 .row.gallery{grid-template-columns:1fr;border-top:0;padding:8px 0 24px}
 .row.gallery .col-img{position:static}
 .row.gallery .col-text{display:none}
+.row.textonly{grid-template-columns:1fr}.row.textonly .col-img{display:none}.row.textonly .col-text{max-width:760px}
