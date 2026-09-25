@@ -130,7 +130,7 @@ pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+ro
 pages["about.html"]=shell("About",'<article class="case wrap">'+row('<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">',
  '''<h1>About</h1>
 <p>I grew up in Alaska drawing and painting. I studied graphic design at California College of the Arts in San Francisco, then human-computer interaction and electronic communication design at Emily Carr University in Vancouver. My first digital work was for an agency in Reykjav&iacute;k, then Copenhagen, then back to San Francisco for design leadership roles at Adobe, Yahoo, Nokia, and eventually my own agency with partners in Copenhagen.</p>
-<p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, then Oracle Health, where I built the platform design organization for the clinical products.</p>
+<p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, now Oracle Health, where I built the platform design organization for the clinical products.</p>
 <p>Twenty years of leading design teams. I build design organizations, the operating models they run on, and the AI-native tooling that changes how they work.</p>
 <p class="meta">Seattle, WA</p>''',"head about")+'</article>',"about")
 
