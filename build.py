@@ -85,7 +85,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 '''),
  (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
   '''<h2>The detail page, as a lesson</h2>
-<p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon. Four designers and one researcher were promoted from L5 to L6 during my tenure.</p>'''),
+<p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon.</p>'''),
  ],("oracle.html","Oracle Health"),("ebay.html","eBay")),"work",1)
 
 pages["work/ebay.html"]=shell("eBay",case("eBay",
