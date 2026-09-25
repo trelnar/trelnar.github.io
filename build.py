@@ -111,7 +111,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design exploration of Toyota's native in-car navigation system."),"work",1)
 
 pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+row(
- slot("deck slides 133 to 134","Design Quarterly, and the Cope and Hope issue."),
+ "",
  '''<h1>How I Lead</h1><p class="lede">Design is a business capability, and it earns that standing by being legible to the rest of the company.</p>
 <h2>Design Quarterly</h2>
 <p>At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>''',"head")+row('',
