@@ -107,7 +107,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
  "2006 to 2015","earlier",[
  (video("../img/earlier/firephone.mp4","../img/earlier/firephone-poster.jpg","Fire Phone design system. THANK YOU Studio for Amazon."),""),
- (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,14)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
+ (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
  (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Our team focused on the MeeGo OS design system, as well as 3rd-party app guidelines."),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design exploration of Toyota's native in-car navigation system."),"work",1)
 
