@@ -74,15 +74,17 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span> <span class="stat"><b>8 to 15</b>designers, adding research, motion, and design technology</span></p>'''),
- (slot("deck slides 75 to 76","The box. Plain brown is part of the brand outside; Prime blue inside, to make the unboxing count."),
+ (img("../img/amazon/wardrobe-screens.jpg","Prime Wardrobe, then Prime Try Before You Buy: fill a box from the app.")+img("../img/amazon/wardrobe-box.jpg","It came in a resealable, postage-paid box for hassle-free returns after try-on.")+img("../img/amazon/wardrobe-stylist.jpg","Prime Stylist concept: a digital version of the customer for a virtual try-on."),
   '''<h2 class="part">Amazon Fashion</h2>
 <p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point. Prime Wardrobe, then called Prime Try Before You Buy, took aim at it.</p>
 <h3>Prime Wardrobe</h3>
 <p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>'''),
- (slot("deck slide 79","Luxury Stores, as designed and as launched."),
+ (img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
   '''<h2>Luxury Stores</h2>
 <p>The last project I led there was the luxury brands exploration: a walled garden inside the Amazon app where only the most exclusive fashion brands could be bought, with minimal store presence and the content carrying the experience. No legacy to design around. It launched more than two years after we designed it, and looked remarkably like the original work.</p>
-<h2>The detail page, as a lesson</h2>
+'''),
+ (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
+  '''<h2>The detail page, as a lesson</h2>
 <p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon. Four designers and one researcher were promoted from L5 to L6 during my tenure.</p>'''),
  ],("oracle.html","Oracle Health"),("ebay.html","eBay")),"work",1)
 
