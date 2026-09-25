@@ -64,7 +64,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
- "Seven years, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Then Head of Design and Research for Amazon Photos, 2019 to 2022, across mobile, web, desktop, Echo Show, and Fire TV.",
+ "One company, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Concept-to-launch of Prime Wardrobe. Then Head of Design and Research for Amazon Photos, across mobile, web, desktop, Echo Show, and Fire TV.",
  "2015 to 2022","amazon",[
  (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=404)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
   '''<h2 class="part">Amazon Photos</h2>
