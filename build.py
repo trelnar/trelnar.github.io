@@ -21,6 +21,8 @@ def slides(srcs, cap=""):
     ON=' class="on"'
     imgs="".join(f'<img src="{x}" alt=""{ON if i==0 else ""}>' for i,x in enumerate(srcs))
     return f'<figure><div class="slides" style="aspect-ratio:1024/668">{imgs}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def video(src, poster, cap=""):
+    return f'<figure><video src="{src}" poster="{poster}" autoplay muted loop playsinline></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
@@ -39,8 +41,10 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  "Director, User Experience Design. I proposed and built Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice across Oracle Health's clinical products. It did not exist before I made the case for it. It now sets the design standard for five product teams and dozens of clinician-facing applications. Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.",
  "2024 to present","oracle",[
- (slot("diagram: guidelines vs skills","Components carry guidelines. Patterns carry skills. The rule set is the deliverable."),
-  '''<h2>From comps to rules</h2>
+ (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
+  '''<h2>Organize around the journey</h2>
+<p>The platform inherited thirty-four patterns with no structure. I grouped them by the stage of the clinician's journey they serve: access, triage, interpret, execute, collaborate, follow up. Each stage has a job the user is trying to do, in their words. Pattern ownership, and then the team itself, was organized the same way, so a designer owns a stretch of the journey rather than a pile of components.</p>
+<h2>From comps to rules</h2>
 <p>When the mandate came to stop shipping Figma comps, I treated it as an operating-model problem rather than a tooling swap. We split the output in two. Components get guidelines, which are reference material a person or a model can look up. Layouts and patterns get skills, which carry the judgment about when to use something, when not to, and how to configure it. The deliverable became the rules, not the pictures. A skill selects and configures; it does not code.</p>
 <p>I wrote the first skills myself so I understood what the toolchain actually needed, then gave each designer ownership of a pattern and its skill. The team built an internal prototyping pipeline, custom tooling, and a shared skill library in a team repo. Concept to testable prototype went from weeks to days, and the team validated considerably more concepts per cycle, internally and with customers.</p>'''),
  ('''<div class="grid">
