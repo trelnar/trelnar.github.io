@@ -62,9 +62,6 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
   '''<h2>Four gates and a definition of done</h2>
 <p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as four gates with a governance step at the end.</p>
 <p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>'''),
- (slot("diagram: notification model and interruption ladder"),
-  '''<h2>Situational awareness as a platform pattern</h2>
-<p>I authored the platform pattern for how any user of the EHR is told that the state of the world changed: one notification object model, a five-class severity taxonomy, an interruption ladder with escalation rules, and a published boundary between three things that get confused. Situational awareness asserts facts. Guidance proposes decisions. The Action List holds work. Alarm fatigue in a clinical setting is a safety problem, so the framing started there.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
