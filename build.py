@@ -53,7 +53,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
   '''<h2>Organize around the journey</h2>
 <p>Experience Core inherited thirty-four patterns with no structure. I grouped them by the stage of the clinician's journey they serve: access, triage, interpret, execute, collaborate, follow up. Each stage has a job the user is trying to do, in their words. Pattern ownership, and then the team itself, was organized the same way, so a designer owns a stretch of the journey rather than a pile of components.</p>'''),
- ('''<div class="grid">
+ (img("../img/oracle/layout-validation.jpg","Three stages, three gates, one scale for every layout.")+'''<div class="grid">
 <div class="card"><h4>1. Design complete</h4><p>Rules written: when to use it, when not to, configurations, and which components fill which slots.</p></div>
 <div class="card"><h4>2. Skill validated</h4><p>Scenario-driven validation. The author never validates their own work.</p></div>
 <div class="card"><h4>3. Foundation ready</h4><p>Components exist, accessible, responsive, published.</p></div>
