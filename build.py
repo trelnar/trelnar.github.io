@@ -57,10 +57,9 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <div class="card"><h4>1. Design complete</h4><p>Rules written: when to use it, when not to, configurations, and which components fill which slots.</p></div>
 <div class="card"><h4>2. Skill validated</h4><p>Scenario-driven validation. The author never validates their own work.</p></div>
 <div class="card"><h4>3. Foundation ready</h4><p>Components exist, accessible, responsive, published.</p></div>
-<div class="card"><h4>4. Governance review</h4><p>Release approval by the platform leads with Dev and Product.</p></div>
 </div>''',
-  '''<h2>Four gates and a definition of done</h2>
-<p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as four gates with a governance step at the end.</p>
+  '''<h2>Three gates and a definition of done</h2>
+<p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as three gates. Release approval by the platform leads with Dev and Product follows the third.</p>
 <p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
