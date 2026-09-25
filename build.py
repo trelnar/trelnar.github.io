@@ -21,8 +21,8 @@ def slides(srcs, cap=""):
     ON=' class="on"'
     imgs="".join(f'<img src="{x}" alt=""{ON if i==0 else ""}>' for i,x in enumerate(srcs))
     return f'<figure><div class="slides" style="aspect-ratio:1024/668">{imgs}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
-def video(src, poster, cap=""):
-    return f'<figure><video src="{src}" poster="{poster}" autoplay muted loop playsinline></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def video(src, poster, cap="", controls=False):
+    return f'<figure><video src="{src}" poster="{poster}" autoplay muted loop playsinline{" controls" if controls else ""}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
@@ -97,7 +97,7 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
  (slot("deck slides 15 to 17","Nine initiatives, three narratives, one lens for planning and org design."),
   '''<h2>Three narratives instead of nine initiatives</h2>
 <p>The seller roadmap arrived as nine parallel initiatives: onboarding, inventory, trust, growth, monetization, shipping, feedback, communications, regulatory. With Product and Engineering leadership we regrouped them into three narratives a seller would recognize: starting my business, running my business, growing my business. Each narrative became the context for design work and could be tailored to the segment, because starting a business as an individual seller looks nothing like starting one as a B2C brand. The narratives reshaped planning and then reshaped how the teams were organized.</p>'''),
- (slot("eBay launch post screenshots, or deck slides 19 to 21","The Magical Listing Tool and the AI image tools that followed."),
+ (video("../img/ebay/magical-listing.mp4","../img/ebay/magical-listing-poster.jpg","The Magical Listing Tool, as launched. eBay's video; unmute for sound.",controls=True),
   '''<h2>eBay's first generative AI feature</h2>
 <p>Most listings on eBay had no description, and when buyers compared two similar items they almost always chose the one with a description. My team designed and shipped the Magical Listing Tool, which drafts title, description, and item specifics for sellers, end to end with eBay's AI team from concept to launch in September 2023. It was the first of a set of tools aimed at removing the effort from listing: start from a photo, or a video with voice-over, and let the system do the rest.</p>
 <p><span class="stat"><b>30%</b>of daily US app sellers tried it in the first weeks</span> <span class="stat"><b>95%+</b>of those kept the AI draft, with or without edits</span> <span class="stat"><b>80%+</b>CSAT</span></p>
