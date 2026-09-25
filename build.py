@@ -66,7 +66,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
  "One company, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Concept-to-launch of Prime Wardrobe. Then Head of Design and Research for Amazon Photos, across mobile, web, desktop, Echo Show, and Fire TV.",
  "2015 to 2022","amazon",[
- (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=404)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
+ (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
   '''<h2 class="part">Amazon Photos</h2>
 <p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.</p>
 <h3>Project Cooper</h3>
