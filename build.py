@@ -21,8 +21,10 @@ def slides(srcs, cap=""):
     ON=' class="on"'
     imgs="".join(f'<img src="{x}" alt=""{ON if i==0 else ""}>' for i,x in enumerate(srcs))
     return f'<figure><div class="slides" style="aspect-ratio:1024/668">{imgs}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
-def video(src, poster, cap="", controls=False):
-    return f'<figure><video src="{src}" poster="{poster}" autoplay muted loop playsinline{" controls" if controls else ""}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def video(src, poster, cap="", controls=False, loop=True):
+    attrs = "autoplay muted loop playsinline" if loop else "controls playsinline preload=\"metadata\""
+    if loop and controls: attrs += " controls"
+    return f'<figure><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
@@ -69,7 +71,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it. I used three tenets to name where it was failing.</p>
 <div class="tenets"><div>We will not ship our org structure.</div><div>Functional is not lovable.</div><div>We won't force our needs onto the customer.</div></div>
 <p>Each tenet came with evidence. Screenshots taken the day before, without cherry-picking, showed headers, type, color, and illustration styles that changed from screen to screen. Screens were functional and viable and plainly not lovable. And a print-ordering link a product owner had placed in the home header had drawn almost no traffic in a year; printing wasn't in customers' top ten needs. No customer need, no reason to keep it.</p>'''),
- (video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
+ (video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper, part 1: the process, in my words. 48 seconds, sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
   '''<h2>Project Cooper</h2>
 <p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
 <p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>'''),
