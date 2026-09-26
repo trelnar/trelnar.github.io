@@ -111,12 +111,16 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Our team focused on the MeeGo OS design system, as well as 3rd-party app guidelines."),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design exploration of Toyota's native in-car navigation system."),"work",1)
 
-pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+row(
- "",
+pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
+ img("img/lead/quarterly.jpg","Design Quarterly, volume 11. Amazon Photos.")
+ +img("img/lead/birthday.jpg","Birthday tradition: everyone dresses as the birthday person.")
+ +img("img/lead/ebay-offsite.jpg","Seller experience offsite at eBay.")
+ +img("img/lead/fashion-collab-1.jpg","A multi-day collaboration across Amazon Fashion, organized and run by me.")
+ +img("img/lead/fashion-collab-2.jpg","Same session: the wall by day three."),
  '''<h1>How I Lead</h1><p class="lede">Design is a business capability, and it earns that standing by being legible to the rest of the company.</p>
 <h2>Design Quarterly</h2>
-<p>At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>''',"head")+row('',
- '''<h2>Operating habits</h2>
+<p>At Photos the team published a Design Quarterly: our work, our process, new people, wins, open roles. It went to the whole org, to external subscribers, and to Amazon Design. It kept partners aware of what we were doing and it kept the team connected to the larger story their pieces added up to. In the first summer of Covid we put out an issue with no design work in it at all; everyone wrote and designed a spread on what was helping them cope and what gave them hope.</p>
+<h2>Operating habits</h2>
 <ul>
 <li>Tenets set with partners at the start, so the argument happens once.</li>
 <li>A written definition of done.</li>
@@ -125,13 +129,7 @@ pages["leadership.html"]=shell("How I Lead",'''<article class="case wrap">'''+ro
 <li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
 </ul>
 <h2>Building the org</h2>
-<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 15, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At Nokia, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>
-<div class="quad">
-<figure><img src="img/lead/birthday.jpg" alt=""><figcaption>Birthday tradition: everyone dresses as the birthday person.</figcaption></figure>
-<figure><img src="img/lead/ebay-offsite.jpg" alt=""><figcaption>Seller experience offsite at eBay.</figcaption></figure>
-<figure><img src="img/lead/fashion-collab-1.jpg" alt=""><figcaption>A multi-day collaboration across Amazon Fashion, organized and run by me.</figcaption></figure>
-<figure><img src="img/lead/fashion-collab-2.jpg" alt=""><figcaption>Same session: the wall by day three.</figcaption></figure>
-</div>''')+'</article>',"lead")
+<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 19, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At Nokia, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>''',"head flip")+'</article>',"lead")
 
 pages["about.html"]=shell("About",'<article class="case wrap">'+row('<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">',
  '''<h1>About</h1>

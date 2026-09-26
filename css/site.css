@@ -81,3 +81,5 @@ figure video{width:100%;height:auto;display:block;background:#f5f4f0}
 .quad figure{margin:0}
 @media (max-width:640px){.quad{grid-template-columns:1fr}}
 mark{background:#ffd9a8;color:inherit;padding:0 2px;border-radius:2px}
+.row.flip .col-img{order:2}.row.flip .col-text{order:1}
+@media (max-width:820px){.row.flip .col-img{order:1}.row.flip .col-text{order:2}}
