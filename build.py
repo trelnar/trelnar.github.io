@@ -45,7 +45,7 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
     f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles)+'</div></div>',"work",dark=True)
 
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
- "Director, User Experience Design. I established Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice across Oracle Health's clinical products. Experience Core sets the design standard for five product teams and dozens of clinician-facing applications. Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work. I am a named inventor on eight patent applications filed by Oracle during this period.",
+ "Director, User Experience Design. I established Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice across Oracle Health's clinical products. Experience Core sets the design standard for five product teams and dozens of clinician-facing applications. <mark>Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</mark> I am a named inventor on eight patent applications filed by Oracle during this period.",
  "2024 to present","oracle",[
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
   '''<h2>Organize around the journey</h2>
