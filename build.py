@@ -129,7 +129,7 @@ pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
 <li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
 </ul>
 <h2>Building the org</h2>
-<p>Amazon Fashion, 5 designers and 2 researchers to 20. Amazon Photos, 8 to 19, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At Nokia, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>''',"head flip")+'</article>',"lead")
+<p>Amazon Fashion, 5 designers and 2 researchers to 20 total, adding program management, design technology, and managers. Amazon Photos, 8 to 19, adding research, motion, and design technology. eBay, 25 designers with research and design program management. Oracle Health, a platform design team that did not exist before I made the case for it. At Nokia, as a senior director reporting to a VP, I ran about 35 people and managed managers. Across all of it the pattern holds: turn ambiguous direction into a structured, verifiable program, and build the team that can run it without me in the room.</p>''',"head flip")+'</article>',"lead")
 
 pages["about.html"]=shell("About",'<article class="case wrap">'+row('<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">',
  '''<h1>About</h1>
