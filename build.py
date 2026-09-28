@@ -33,7 +33,7 @@ def row(left, right, cls=""):
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
 def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
-    head=f'<h1>{title}</h1><p class="lede">{lede}</p><p class="year">{year}</p>'
+    head=f'<h1>{title}</h1>'+(lede if lede.lstrip().startswith("<") else f'<p class="lede">{lede}</p><p class="year">{year}</p>')
     body='<article class="case wrap">'+row("", head, "head")
     for left,right in rows: body+=row(left,right,"" if right else "gallery")
     body+=f'<div class="next"><a href="{prev[0]}">&larr; {prev[1]}</a><a href="{nxt[0]}">{nxt[1]} &rarr;</a></div></article>\n'
@@ -45,7 +45,12 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
     f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles)+'</div></div>',"work",dark=True)
 
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
- "Director, User Experience Design. I established Experience Core, the platform design team that owns the interaction patterns, components, design system, and research practice across Oracle Health's clinical products. Experience Core sets the design standard for five product teams and dozens of clinician-facing applications. <mark>Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</mark> I am a named inventor on eight patent applications filed by Oracle during this period.",
+'''<ul class="facts">
+<li><b>Role</b> Director, User Experience Design. 2024 to present.</li>
+<li><b>Team</b> Experience Core, the platform design team I established. Sets the design standard for five product teams and dozens of clinician-facing applications.</li>
+<li><b>Work</b> Interaction patterns, components, design system, research practice. Named inventor on eight patent applications filed by Oracle.</li>
+</ul>
+<p class="lede"><em>Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</em></p>''',
  "2024 to present","oracle",[
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
   '''<h2>Organize around the journey</h2>
@@ -65,7 +70,11 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
- "One company, two businesses. Head of Design and Research for Amazon Fashion, 2015 to 2019, growing the org from 5 designers and 2 researchers to 20. Concept-to-launch of Prime Wardrobe. Then Head of Design and Research for Amazon Photos, across mobile, web, desktop, Echo Show, and Fire TV.",
+'''<ul class="facts">
+<li><b>Role</b> Head of Design and Research. Amazon Fashion, 2015 to 2019. Amazon Photos, 2019 to 2022.</li>
+<li><b>Team</b> Fashion: 5 designers and 2 researchers to 20, adding program management, design technology, and managers. Photos: 8 to 19.</li>
+<li><b>Work</b> Prime Wardrobe, concept to launch. Luxury Stores. Project Cooper, the Photos rebuild: CSAT 61% to 78% in six months. Mobile, web, desktop, Echo Show, Fire TV.</li>
+</ul>''',
  "2015 to 2022","amazon",[
  (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
   '''<h2 class="part">Amazon Photos</h2>
@@ -90,7 +99,11 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
  ],("oracle.html","Oracle Health"),("ebay.html","eBay")),"work",1)
 
 pages["work/ebay.html"]=shell("eBay",case("eBay",
- "Director of Product Design, Seller Experience. I owned the seller experience end to end, web and mobile, across consumer, small business, and enterprise sellers on a marketplace running roughly $73 billion in annual GMV with 132 million active buyers. Relative to the buyer side, selling had been neglected for years, which meant the opportunity was large and the organizational habits were set.",
+'''<ul class="facts">
+<li><b>Role</b> Director of Product Design, Seller Experience. 2022 to 2024.</li>
+<li><b>Team</b> 25 designers, 2 researchers, 2 design program managers.</li>
+<li><b>Work</b> Seller experience end to end, web and mobile, consumer to enterprise, on a marketplace of roughly $73 billion annual GMV and 132 million active buyers. eBay's first generative AI feature.</li>
+</ul>''',
  "2022 to 2024","ebay",[
  (video("../img/ebay/magical-listing.mp4","../img/ebay/magical-listing-poster.jpg","The Magical Listing Tool, as launched. eBay's video, sound on.",loop=False),
   '''<h2>eBay's first generative AI feature</h2>
@@ -104,7 +117,11 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
  ],("amazon.html","Amazon"),("earlier.html","Earlier Work")),"work",1)
 
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
- "Adobe, Nokia, and THANK YOU Studio. Agency and in-house, San Francisco and Copenhagen, before Amazon.",
+'''<ul class="facts">
+<li><b>Role</b> Partner and VP of Product Design, THANK YOU Studio, 2012 to 2015. Senior Director of UX Design, Nokia, 2009 to 2012. Creative Director, Adobe, 2006 to 2009.</li>
+<li><b>Team</b> Studios in San Francisco and Copenhagen. At Nokia, about 35 people across five cities.</li>
+<li><b>Work</b> Kindle Fire launch and Fire Phone design system for Amazon. Toyota in-car navigation. MeeGo OS design system and third-party app guidelines. Adobe.com redesign.</li>
+</ul>''',
  "2006 to 2015","earlier",[
  (video("../img/earlier/firephone.mp4","../img/earlier/firephone-poster.jpg","Fire Phone design system. THANK YOU Studio for Amazon."),""),
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
