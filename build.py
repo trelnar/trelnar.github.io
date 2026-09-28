@@ -40,9 +40,9 @@ def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
     return body
 
 pages={}
-tiles=[("oracle","Oracle Health"),("amazon","Amazon"),("ebay","eBay"),("earlier","Earlier Work")]
+tiles=[("oracle","Oracle Health","oracle"),("amazon","Amazon","amazon"),("ebay","eBay","ebay"),("earlier","Earlier Work","earlier-2")]
 pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><div class="tiles">'+"".join(
-    f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{k}.jpg" alt="{t}"><span>{t}</span></a>' for k,t in tiles)+'</div></div>',"work",dark=True)
+    f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{f}.jpg" alt="{t}"><span>{t}</span></a>' for k,t,f in tiles)+'</div></div>',"work",dark=True)
 
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 '''<ul class="facts">
