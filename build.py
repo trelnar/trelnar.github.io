@@ -76,7 +76,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <li><b>Work</b> Prime Wardrobe, concept to launch. Luxury Stores. Project Cooper, the Photos rebuild: CSAT 61% to 78% in six months. Mobile, web, desktop, Echo Show, Fire TV.</li>
 </ul>''',
  "2015 to 2022","amazon",[
- (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+'<div class="pair">'+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild.")+'</div>',
+ (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402),
   '''<h2 class="part">Amazon Photos</h2>
 <p>Photos began as cloud storage that happened to hold photos; years of additions by different teams left it trailing native apps. Six million monthly active customers, and underperforming for a Prime-bundled service.</p>
 <h3>Project Cooper</h3>
@@ -84,6 +84,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>We set tenets with Dev and PM first, so three orgs argued from one set of criteria. The design direction shaped the rebrand that shipped alongside. Most features carried over unchanged; the gain was making them usable and findable.</p>
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span></p>'''),
+ ('<div class="pair">'+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild.")+'</div>',""),
  (img("../img/amazon/wardrobe-screens.jpg","Prime Wardrobe, then Prime Try Before You Buy: fill a box from the app.")+img("../img/amazon/wardrobe-box.jpg","It came in a resealable, postage-paid box for hassle-free returns after try-on.")+img("../img/amazon/wardrobe-stylist.jpg","Prime Stylist concept: a digital version of the customer for a virtual try-on."),
   '''<h2 class="part">Amazon Fashion</h2>
 <p>In 2015 the US spent roughly $300 billion on clothing and shoes, under a tenth of it online. Prime Wardrobe, born Prime Try Before You Buy, took aim at the weak point: judging a garment from a detail page.</p>
