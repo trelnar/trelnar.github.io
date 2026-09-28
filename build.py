@@ -76,7 +76,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <li><b>Work</b> Prime Wardrobe, concept to launch. Luxury Stores. Project Cooper, the Photos rebuild: CSAT 61% to 78% in six months. Mobile, web, desktop, Echo Show, Fire TV.</li>
 </ul>''',
  "2015 to 2022","amazon",[
- (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
+ (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+'<div class="pair">'+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild.")+'</div>',
   '''<h2 class="part">Amazon Photos</h2>
 <p>Photos began as cloud storage that happened to hold photos; years of additions by different teams left it trailing native apps. Six million monthly active customers, and underperforming for a Prime-bundled service.</p>
 <h3>Project Cooper</h3>
