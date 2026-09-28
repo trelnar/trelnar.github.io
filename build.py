@@ -139,7 +139,7 @@ pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
 <h2>Operating habits</h2>
 <ul>
 <li>A team contract, written down: what I expect from the team and what they can expect from me.</li>
-<li>Tenets set with partners at the start, so the argument happens once.</li>
+<li>Tenets set with partners at the start, so the hard conversations happen once.</li>
 <li>A written definition of done.</li>
 <li>Ownership assigned by pattern, so every designer has something that is theirs.</li>
 <li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
