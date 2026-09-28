@@ -50,7 +50,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <li><b>Team</b> Experience Core, the platform design team I established. Sets the design standard for five product teams and dozens of clinician-facing applications.</li>
 <li><b>Work</b> Interaction patterns, components, design system, research practice. Named inventor on eight patent applications filed by Oracle.</li>
 </ul>
-<p class="lede"><em>Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</em></p>''',
+<p class="caveat">Most of the work is unreleased and stays inside Oracle. What I can show is the operating model, because the operating model is the work.</p>''',
  "2024 to present","oracle",[
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
   '''<h2>Organize around the journey</h2>
