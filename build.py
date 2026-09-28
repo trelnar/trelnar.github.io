@@ -34,7 +34,7 @@ def row(left, right, cls=""):
 
 def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
     head=f'<h1>{title}</h1><p class="lede">{lede}</p><p class="year">{year}</p>'
-    body='<article class="case wrap">'+row(img(f"../img/tiles/{hero}.jpg",herocap), head, "head")
+    body='<article class="case wrap">'+row("", head, "head")
     for left,right in rows: body+=row(left,right,"" if right else "gallery")
     body+=f'<div class="next"><a href="{prev[0]}">&larr; {prev[1]}</a><a href="{nxt[0]}">{nxt[1]} &rarr;</a></div></article>\n'
     return body
