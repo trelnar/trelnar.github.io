@@ -54,19 +54,19 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  "2024 to present","oracle",[
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician's journey. The team is organized the same way."),
   '''<h2>Organize around the journey</h2>
-<p>Experience Core inherited thirty-four patterns with no structure. I grouped them by the stage of the clinician's journey they serve: access, triage, interpret, execute, collaborate, follow up. Each stage has a job the user is trying to do, in their words. Pattern ownership, and then the team itself, was organized the same way, so a designer owns a stretch of the journey rather than a pile of components.</p>'''),
+<p>Experience Core inherited thirty-four patterns, no structure. I grouped them by the clinician's journey, each stage a job in the user's words: access, triage, interpret, execute, collaborate, follow up. Ownership followed, then the team. A designer owns a stretch of journey, not a pile of components.</p>'''),
  (img("../img/oracle/tooling-spec.jpg","The tooling pipeline: intent in, guidelines and skills pulled from the design system, output triaged into specs and prototypes. Every design team works from the same library."),
   '''<h2>From comps to rules</h2>
-<p>We've stopped shipping Figma comps. I treated it as an operating-model shift rather than a tooling swap. We split the output in two. Components get guidelines, which are reference material a person or a model can look up. Layouts and patterns get skills, which carry the judgment about when to use something, when not to, and how to configure it. The deliverable became the rules, not the pictures. A skill selects and configures; it does not code.</p>
-<p>I wrote the first skills myself so I understood what the toolchain actually needed, then gave each designer ownership of a pattern and its skill. We built an internal prototyping pipeline, custom tooling, and a shared skill library in a team repo. Concept to testable prototype went from weeks to days, and the team validated considerably more concepts per cycle, internally and with customers.</p>'''),
+<p>We stopped shipping Figma comps; the deliverable became the rules. Components get guidelines, reference a person or a model can look up. Layouts and patterns get skills, which carry the judgment of when, when not, and how. A skill selects and configures. It does not code.</p>
+<p>I wrote the first skills myself, then gave each designer a pattern and its skill. Concept to testable prototype went from weeks to days, and we validated considerably more concepts per cycle.</p>'''),
  (img("../img/oracle/codex-learning-day.jpg","Codex learning day. Every designer shipped a working prototype in one session. None of it is product; all of it is the new muscle."),
   '''<h2>Upskilling the team</h2>
-<p>A new toolchain is a leadership problem before it is a tooling problem. I ran a learning day: no product work, no clinical constraints, a made-up brief per designer, and one rule, ship a working prototype by the end of the day. Everyone did. Some of it was silly on purpose. That was the point; the fear of the tool went away in an afternoon.</p>
-<p>From there each designer took ownership of a pattern and its skill, so the learning had somewhere to land. The prototyping pipeline, the custom tooling, and the shared skill library in the team repo all came out of designers building for themselves, not out of a mandate. Concept to testable prototype went from weeks to days.</p>'''),
+<p>A new toolchain is a leadership problem first. I ran a learning day: no product work, no clinical constraints, a made-up brief each, and one rule, ship a working prototype by day's end. Everyone did, some of it silly on purpose. The fear left in an afternoon.</p>
+<p>Each designer then owned a pattern and its skill, so the learning had somewhere to land. The pipeline, the tooling, the shared skill library: designers built them for themselves.</p>'''),
  (img("../img/oracle/layout-validation.jpg","Three stages, three gates, one scale for every layout."),
   '''<h2>Three gates and a definition of done</h2>
-<p>Layouts kept getting misaligned because nobody shared a definition of done. I wrote one, as three gates. Release approval by the platform leads with Dev and Product follows the third.</p>
-<p>Landing it meant sequencing alignment deliberately: eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>'''),
+<p>Layouts kept misaligning because nobody shared a definition of done. I wrote one as three gates; release approval by the platform leads with Dev and Product follows the third.</p>
+<p>I aligned eight Dev and PM pillar leads first, then SVP peers, then the top. The Action List skill and a three-role human-factors demo became the reference example senior engineering leadership pointed to.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
@@ -78,24 +78,23 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
  "2015 to 2022","amazon",[
  (video("../img/amazon/cooper-launch-2.mp4","../img/amazon/cooper-launch-2-poster.jpg","The launch video. Sound on.",loop=False,maxw=402)+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild."),
   '''<h2 class="part">Amazon Photos</h2>
-<p>Photos began as a cloud storage service that happened to hold photos, and years of feature additions by different teams had accumulated into an experience that didn't compete with the native photo apps on anyone's phone. At six million monthly active customers it was underperforming for a Prime-bundled service. Leadership was committed to fixing it.</p>
+<p>Photos began as cloud storage that happened to hold photos; years of additions by different teams left it trailing native apps. Six million monthly active customers, and underperforming for a Prime-bundled service.</p>
 <h3>Project Cooper</h3>
-<p>That case got the green light for a full teardown and rebuild. Research settled what customers actually wanted, in order: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. That's the whole list. The home screen was rebuilt to meet the first two immediately, and the rest of the model followed: my memories, quick-find tools, what I've shared and with whom, my account.</p>
-<p>We set shared design and product tenets with Dev and PM partners at the start, so three orgs argued from one set of decision criteria instead of relitigating tradeoffs at every review. The design direction shaped the rebrand that shipped alongside the rebuild. Most of the feature set carried over unchanged, so the gains came from making it usable and findable.</p>
+<p>Leadership green-lit a teardown and rebuild. Research set the order. The whole list: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. The home screen took the first two; the rest followed.</p>
+<p>We set tenets with Dev and PM first, so three orgs argued from one set of criteria. The design direction shaped the rebrand that shipped alongside. Most features carried over unchanged; the gain was making them usable and findable.</p>
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span></p>'''),
  (img("../img/amazon/wardrobe-screens.jpg","Prime Wardrobe, then Prime Try Before You Buy: fill a box from the app.")+img("../img/amazon/wardrobe-box.jpg","It came in a resealable, postage-paid box for hassle-free returns after try-on.")+img("../img/amazon/wardrobe-stylist.jpg","Prime Stylist concept: a digital version of the customer for a virtual try-on."),
   '''<h2 class="part">Amazon Fashion</h2>
-<p>In 2015 less than a tenth of the roughly $300 billion spent on clothing and shoes in the US was spent online, and Amazon was investing heavily to change that. Search and discovery were strong; evaluating a garment on a detail page was the weak point. Prime Wardrobe, then called Prime Try Before You Buy, took aim at it.</p>
+<p>In 2015 the US spent roughly $300 billion on clothing and shoes, under a tenth of it online. Prime Wardrobe, born Prime Try Before You Buy, took aim at the weak point: judging a garment from a detail page.</p>
 <h3>Prime Wardrobe</h3>
-<p>Shop for clothing and shoes, fill a box, have it shipped free, try everything for seven days, send back what you don't want in the same self-sealing prepaid box, pay only for what you keep. It was complex even for Amazon, touching every part of the retail supply chain, digital and physical. I worked directly with the product owner and executive leadership to pitch and resource the design, and saw it through to launch. Prime Stylist followed, a curated-box model for customers who wanted guidance.</p>'''),
+<p>Fill a box, shipped free, seven days to try, pay only for what you keep. I pitched and resourced the design with the product owner and executive leadership, and saw it through to launch. Prime Stylist, a curated box, followed.</p>'''),
  (img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
   '''<h2>Luxury Stores</h2>
-<p>The last project I led there was the luxury brands exploration: a walled garden inside the Amazon app where only the most exclusive fashion brands could be bought, with minimal store presence and the content carrying the experience. No legacy to design around. It launched more than two years after we designed it, and looked remarkably like the original work.</p>
-'''),
+<p>My last project there was the luxury brands exploration: a walled garden in Amazon's app, only the most exclusive fashion brands, minimal store presence, content carrying the experience. No legacy to design around. It launched more than two years after we designed it, remarkably like the original.</p>'''),
  (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
   '''<h2>The detail page, as a lesson</h2>
-<p>For four years, improving the product detail page for fashion customers was constant work, and every change had to win for all Amazon customers and pass web labs before it shipped. It was glacially incremental and it taught me how to move a shared platform: negotiate, test, and pick the changes that help everyone. I later aligned my team, marketing design, and the Shopbop design team on shared tenets so the fashion experience read as one thing across Amazon.</p>'''),
+<p>Four years on the fashion detail page, where every change had to win for all Amazon customers and pass web labs. Glacially incremental, and it taught me how to move a shared platform: negotiate, test, pick the changes that help everyone. Shared tenets later pulled my team, marketing design, and Shopbop design into one fashion experience across Amazon.</p>'''),
  ],("oracle.html","Oracle Health"),("ebay.html","eBay")),"work",1)
 
 pages["work/ebay.html"]=shell("eBay",case("eBay",
@@ -107,13 +106,13 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
  "2022 to 2024","ebay",[
  (video("../img/ebay/magical-listing.mp4","../img/ebay/magical-listing-poster.jpg","The Magical Listing Tool, as launched. eBay's video, sound on.",loop=False),
   '''<h2>eBay's first generative AI feature</h2>
-<p>Most listings on eBay had no description, and when buyers compared two similar items they almost always chose the one with a description. My team designed and shipped the Magical Listing Tool, which drafts title, description, and item specifics for sellers, end to end with eBay's AI team from concept to launch in September 2023. It was the first of a set of tools aimed at removing the effort from listing: start from a photo, or a video with voice-over, and let the system do the rest.</p>
+<p>Most listings had no description. Between two similar items, buyers almost always chose the one that did. My team designed and shipped the Magical Listing Tool with eBay's AI team, concept to launch, September 2023. It drafts title, description, and item specifics. The first of a set of tools that take the effort out of listing: a photo, or a video with voice-over, and the rest follows.</p>
 <p><span class="stat"><b>30%</b>of daily US app sellers tried it in the first weeks</span> <span class="stat"><b>95%+</b>of those kept the AI draft, with or without edits</span> <span class="stat"><b>80%+</b>CSAT</span></p>
 <p class="meta">Figures from <a href="https://innovation.ebayinc.com/stories/magical-listing-tool-harnesses-the-power-of-ai-to-make-selling-on-ebay-faster-easier-and-more-accurate/" rel="noopener">eBay's launch post</a>. Named Best Overall Generative AI Solution in the <a href="https://innovation.ebayinc.com/stories/ebays-magical-listing-tool-wins-ai-breakthrough-award-for-best-overall-generative-ai-solution/" rel="noopener">AI Breakthrough Awards</a>.</p>'''),
  (img("../img/ebay/sprint-journey.jpg","One step of one persona's journey from the sprint. The seller's words set the target; the concept answers them."),
   '''<h2>The mobile seller sprint</h2>
-<p>Small-business sellers were running their businesses on phones, and eBay's mobile selling features trailed competitors by a wide margin. SMBs were 6 percent of sellers and 42 percent of revenue. I ran one of three Lighthouse design sprints on this: cross-disciplinary teams from Product, Marketing, and Engineering through a structured discovery track, three personas plotted against their emotional and functional journeys, overlaid to find the shared territories, then concepts for each territory that graduate a seller from novice to pro. The vision was one flexible system rather than a fixed feature set, because a seller's needs change as the business grows. The concepts themselves stay internal; the method is the point.</p>
-<p>The other change that mattered: I got Product to commit design into their six-month planning cycle, so the team shaped roadmaps before they were set instead of receiving them finished.</p>'''),
+<p>Small businesses, 6 percent of sellers and 42 percent of revenue, lived on phones, where eBay trailed. I ran one of three Lighthouse sprints with Product, Marketing, and Engineering: three personas, journeys overlaid to find shared territory, concepts that graduate a seller from novice to pro. The vision was one flexible system, because a business grows. The concepts stay internal. The method is the point.</p>
+<p>I got design into Product's six-month planning cycle, shaping roadmaps before they were set.</p>'''),
  ],("amazon.html","Amazon"),("earlier.html","Earlier Work")),"work",1)
 
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
