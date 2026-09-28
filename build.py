@@ -81,7 +81,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>Photos began as cloud storage that happened to hold photos; years of additions by different teams left it trailing native apps. Six million monthly active customers, and underperforming for a Prime-bundled service.</p>
 <h3>Project Cooper</h3>
 <p>Leadership green-lit a teardown and rebuild. Research set the order. The whole list: show me my photos, help me find them fast, let me share them easily, surprise me with memories, show me my account. The home screen took the first two; the rest followed.</p>
-<p>We set tenets with Dev and PM first, so three orgs argued from one set of criteria. The design direction shaped the rebrand that shipped alongside. Most features carried over unchanged; the gain was making them usable and findable.</p>
+<p>We set tenets with Dev and PM first, so three orgs made decisions from one set of criteria. The design direction shaped the rebrand that shipped alongside. Most features carried over unchanged; the gain was making them usable and findable.</p>
 <h3>Shipped</h3>
 <p><span class="stat"><b>61% to 78%</b>CSAT within six months of launch</span></p>'''),
  ('<div class="pair">'+video("../img/amazon/cooper-process-1.mp4","../img/amazon/cooper-process-1-poster.jpg","Cooper: the process, in my words. Sound on.",loop=False)+video("../img/amazon/cooper-prototypes.mp4","../img/amazon/cooper-prototypes-poster.jpg","Cooper prototypes, built and tested with customers before the rebuild.")+'</div>',""),
