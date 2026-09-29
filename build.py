@@ -57,7 +57,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p>Experience Core inherited thirty-four patterns, no structure. I grouped them by the clinician's journey, each stage a job in the user's words: access, triage, interpret, execute, collaborate, follow up. Ownership followed, then the team. A designer owns a stretch of journey, not a pile of components.</p>'''),
  (img("../img/oracle/tooling-spec.jpg","The tooling pipeline: intent in, guidelines and skills pulled from the design system, output triaged into specs and prototypes. Every design team works from the same library."),
   '''<h2>From comps to rules</h2>
-<p>We stopped shipping Figma comps; the deliverable became the rules. Components get guidelines, reference a person or a model can look up. Layouts and patterns get skills, which carry the judgment of when, when not, and how. A skill selects and configures. It does not code.</p>
+<p>Design still starts in Figma. The comp stopped being the deliverable; the rules did. Components get guidelines, reference a person or a model can look up. Layouts and patterns get skills, which carry the judgment of when, when not, and how. A skill selects and configures. It does not code.</p>
 <p>I wrote the first skills myself, then gave each designer a pattern and its skill. Concept to testable prototype went from weeks to days, and we validated considerably more concepts per cycle.</p>'''),
  (img("../img/oracle/codex-learning-day.jpg","Codex learning day. Every designer shipped a working prototype in one session. None of it is product; all of it is the new muscle."),
   '''<h2>Upskilling the team</h2>
