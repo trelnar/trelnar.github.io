@@ -1,5 +1,5 @@
 (async function(){
-  const H='c485ef4fb737514123b0e48a447f351744f4a5f166415aeb29fddb048cf2076b';
+  const HS=['7784d239b24238cb93991708eb2ef856f19deba43c9f06e86b27592bd3ab8397'];
   const body=document.body;
   function open(){const g=document.getElementById('gate');if(g)g.remove();body.classList.remove('locked');}
   try{ if(sessionStorage.getItem('ok')==='1'){open();return;} }catch(e){}
@@ -10,7 +10,7 @@
   document.getElementById('gateForm').addEventListener('submit',async e=>{
     e.preventDefault();
     const v=document.getElementById('pw').value.trim().toLowerCase();
-    if(await sha(v)===H){ try{sessionStorage.setItem('ok','1');}catch(e){} open(); }
+    if(HS.includes(await sha(v))){ try{sessionStorage.setItem('ok','1');}catch(e){} open(); }
     else{ document.getElementById('err').textContent='Not it. Check the note.'; }
   });
 })();
