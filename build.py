@@ -1,5 +1,4 @@
 import os, time
-from diagrams import pipeline, skilltest, roles
 V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
@@ -17,8 +16,6 @@ def shell(title, body, on, depth=0, dark=False):
 
 def img(src, cap=""):
     return f'<figure><img src="{src}" alt="">{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
-def fig(svg, cap=""):
-    return f'<figure>{svg}{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slot(label, cap=""):
     return f'<figure><div class="slot">{label}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slides(srcs, cap=""):
@@ -61,22 +58,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  (img("../img/oracle/tooling-spec.jpg","The tooling pipeline: intent in, guidelines and skills pulled from the design system, output triaged into specs and prototypes. Every design team works from the same library."),
   '''<h2>From comps to rules</h2>
 <p>Design still starts in Figma. The comp stopped being the deliverable; the rules did. Components get guidelines, reference a person or a model can look up. Layouts and patterns get skills, which carry the judgment of when, when not, and how. A skill selects and configures. It does not code.</p>
-<p>I wrote the first skills myself, then gave each designer a pattern and its skill.</p>'''),
- (fig(pipeline(),"Intent in, prototype out, customers in the loop. What took weeks takes days."),
-  '''<h2 class="part">AI in the designers' workflow</h2>
-<p>Three things, built inside the team. A prototyping pipeline: an intent goes in, a brief, a frame, a data file, and a working prototype comes out. Custom tooling around it, so the pipeline runs from where designers already work. A shared skill library in a team repo, which every designer draws from and adds to, so the judgment accumulates instead of living in one head.</p>
-<p>Concept to testable prototype went from weeks to days. The team validates more concepts per cycle with customers, because a prototype is now cheap enough to be wrong.</p>
-<p>Two demos made the case. Both are built on the Action List, the clinician's worklist, the place work lands and gets done. It shipped in 2025 and is in customers' hands.</p>'''),
- (fig(skilltest(),"Same prompt, six runs. Without the skill, three answers. With it, one.")
-  +slot("Image slot: the shipped Action List, then the six prototypes side by side","Assets in recovery: the shipped screen and the six prototype screens."),
-  '''<h2>The skill test</h2>
-<p>I wrote the skill for the Action List: the rules for when it applies, what it holds, and how it is configured. To prove the skill was doing work, I gave three agents the same prompt and had them build the Action List from scratch, once without the skill and once with it.</p>
-<p>Without it, three different layouts, three different behaviors. With it, three prototypes that matched each other and the shipped design. That was the argument for the operating model, made in one screen.</p>'''),
- (fig(roles(),"One panel, one skill, three worklists.")
-  +slot("Image or video slot: the same panel as physician, nurse, and front desk","Assets in recovery: the three role views."),
-  '''<h2>One pattern, three roles</h2>
-<p>The second demo answered the question every product team asked: does one pattern serve everyone? Same set of patients, three roles. The physician sees fewer tasks, weighted to decisions. The nurse sees more, weighted to execution and follow-up. The front desk sees scheduling and paperwork and nothing clinical.</p>
-<p>One pattern, one skill, three experiences, because the skill knows what each role is there to do.</p>'''),
+<p>I wrote the first skills myself, then gave each designer a pattern and its skill. Concept to testable prototype went from weeks to days, and we validated considerably more concepts per cycle.</p>'''),
  (img("../img/oracle/codex-learning-day.jpg","Codex learning day. Every designer shipped a working prototype in one session. None of it is product; all of it is the new muscle."),
   '''<h2>Upskilling the team</h2>
 <p>A new toolchain is a leadership problem first. I ran a learning day: no product work, no clinical constraints, a made-up brief each, and one rule, ship a working prototype by day's end. Everyone did, some of it silly on purpose. The fear left in an afternoon.</p>
