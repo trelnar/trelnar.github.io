@@ -108,7 +108,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>In 2015 the US spent roughly $300 billion on clothing and shoes, under a tenth of it online. Prime Wardrobe, born Prime Try Before You Buy, took aim at the weak point: judging a garment from a detail page.</p>
 <h3>Prime Wardrobe</h3>
 <p>Fill a box, shipped free, seven days to try, pay only for what you keep. I pitched and resourced the design with the product owner and executive leadership, and saw it through to launch. Prime Stylist, a curated box, followed.</p>'''),
- (video("../img/amazon/luxury-walkthrough.mp4","../img/amazon/luxury-walkthrough-poster.jpg","The early prototype that pitched Amazon Luxury, placeholder name X. Approved by executive leadership, it became the reference for the final experience. Click to play.",loop=False,maxw=320)+img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
+ (img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
   '''<h2>Luxury Stores</h2>
 <p>My last project there was the luxury brands exploration: a walled garden in Amazon's app, only the most exclusive fashion brands, minimal store presence, content carrying the experience. No legacy to design around. It launched more than two years after we designed it, remarkably like the original.</p>'''),
  (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
