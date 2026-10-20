@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Kevin Ellis, Design Leadership</title>
+<link rel="stylesheet" href="_common.css"><style>
+.page{max-width:1180px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:150px 1fr;gap:40px}
+.rail{position:sticky;top:0;align-self:start;height:100vh;padding-top:120px;font-size:13px;letter-spacing:.04em}
+.rail ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.rail li a{display:block;padding:7px 0 7px 16px;color:var(--muted);margin-left:-1px;border-left:1px solid transparent;transition:color .2s,border-color .2s}
+.rail li a.on{color:var(--ink);border-left-color:var(--ink)}
+.rail li a b{display:block;font-weight:600;font-variant-numeric:tabular-nums}
+.rail li a span{display:block;font-size:12px}
+.main{min-width:0}
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:48px 0 64px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(34px,4.6vw,64px);line-height:1.08;letter-spacing:-.01em;margin:0 0 26px;max-width:18ch}
+.hero p{font-size:19px;color:var(--muted);max-width:52ch;margin:0 0 8px}
+.hero .cue{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:40px}
+.ch{border-top:1px solid var(--line);padding:56px 0 48px;scroll-margin-top:24px}
+.ch .when{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-variant-numeric:tabular-nums}
+.ch h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin:0 0 6px;letter-spacing:-.01em}
+.ch .claim{font-size:21px;color:var(--ink);margin:0 0 30px;max-width:40ch}
+.ev{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:start}
+.ev figure{margin:0}.ev figure img{width:100%;height:auto;background:var(--card)}
+.ev figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.ev p{margin:0 0 14px}
+.stats{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.stats b{display:block;font-size:26px;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+.stats li{font-size:14px;color:var(--muted)}
+.more{display:inline-block;margin-top:22px;font-size:14px;letter-spacing:.04em}
+.lead ul{padding-left:1.1em;margin:0 0 18px;max-width:60ch}.lead li{margin-bottom:8px}
+.contact p{margin:0 0 6px;font-size:19px}
+@media (max-width:860px){.page{grid-template-columns:1fr;gap:0}.rail{position:sticky;top:0;height:auto;background:var(--bg);z-index:5;border-bottom:1px solid var(--line);margin:0 -24px;padding:0 24px;width:calc(100% + 48px);overflow:hidden}.rail ol{border:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}.rail ol::-webkit-scrollbar{display:none}.rail li a{padding:10px 10px 8px;border-left:0;border-bottom:2px solid transparent;white-space:nowrap}.rail li a.on{border-left:0;border-bottom-color:var(--ink)}.rail li a span{display:none}.hero{min-height:0;padding:40px 0 48px}.ev{grid-template-columns:1fr;gap:22px}.stats{grid-template-columns:1fr 1fr}}
+</style></head><body class="locked"><div id="site">
+<div class="dirbar"><b>UX direction</b><a class="on" href="a-one-scroll.html">A · One scroll</a><a href="b-spine.html">B · The spine</a><a href="c-system.html">C · The system</a><a href="index.html">Index</a><span class="pov">Point of view: a leader's record reads best as one argument. One page, one scroll, every claim followed by its evidence. The case pages become the deep read.</span></div>
+<div class="wrap"><header class="top"><a class="brand" href="#top">Kevin Ellis</a><nav><ul><li><a href="#lead">How I lead</a></li><li><a href="../about.html">About</a></li><li><a href="#contact">Contact</a></li></ul></nav></header></div>
+<div class="page" id="top">
+<aside class="rail"><ol>
+<li><a href="#oracle" data-for="oracle"><b>2024</b><span>Oracle Health</span></a></li>
+<li><a href="#ebay" data-for="ebay"><b>2022</b><span>eBay</span></a></li>
+<li><a href="#photos" data-for="photos"><b>2019</b><span>Amazon Photos</span></a></li>
+<li><a href="#fashion" data-for="fashion"><b>2015</b><span>Amazon Fashion</span></a></li>
+<li><a href="#earlier" data-for="earlier"><b>2006</b><span>Earlier</span></a></li>
+<li><a href="#lead" data-for="lead"><b>Lead</b><span>How I lead</span></a></li>
+</ol></aside>
+<main class="main">
+<section class="hero">
+<h1>I build design organizations, the operating models they run on, and the AI-native tooling that changes how they work.</h1>
+<p>Twenty years leading design teams at Oracle Health, eBay, Amazon, Nokia, and Adobe. Below: what each one asked for, what I built, and what it did.</p>
+<p class="cue">Scroll for the evidence</p>
+</section>
+
+<section class="ch" id="oracle">
+<p class="when">2024 to present · Director, User Experience Design</p>
+<h2>Oracle Health</h2>
+<p class="claim">The operating model is the work.</p>
+<div class="ev">
+<figure><img src="../img/oracle/layout-validation.jpg" alt=""><figcaption>Three stages, three gates, one definition of done for every layout.</figcaption></figure>
+<div><p>Experience Core, the platform design team that did not exist before I made the case for it, sets the standard for five product organizations and dozens of clinician-facing applications. Thirty-four patterns organized by the clinician's journey. Comps replaced by rules a person or a model can look up. A skill library the designers built for themselves.</p>
+<p>The proof: three agents given the same prompt built three different Action Lists without the skill, and three matching ones with it. Concept to testable prototype went from weeks to days.</p>
+<ul class="stats"><li><b>5</b>product organizations</li><li><b>8</b>patent filings</li><li><b>weeks to days</b>concept to prototype</li><li><b>WCAG 2.1 AA</b>as a gate, not a hope</li></ul>
+<a class="more" href="../work/oracle.html">Read the Oracle Health case &rarr;</a></div>
+</div></section>
+
+<section class="ch" id="ebay">
+<p class="when">2022 to 2024 · Director of Product Design, Seller Experience</p>
+<h2>eBay</h2>
+<p class="claim">eBay's first generative AI feature, concept to launch in a year.</p>
+<div class="ev">
+<figure><img src="../img/ebay/magical-listing-poster.jpg" alt=""><figcaption>The Magical Listing Tool, as launched, September 2023.</figcaption></figure>
+<div><p>Most listings had no description, and buyers almost always chose the item that did. My team designed and shipped the Magical Listing Tool with eBay's AI team: a photo in, title, description, and item specifics out. Thirty percent of daily US app sellers tried it in the first weeks; more than 95 percent kept the draft.</p>
+<p>Behind it, seller narratives, Starting, Running, Growing my business, became the org and planning lens, and design got into Product's six-month planning cycle.</p>
+<ul class="stats"><li><b>$73B</b>annual GMV</li><li><b>132M</b>active buyers</li><li><b>25</b>designers, plus research and DPM</li><li><b>95%+</b>kept the AI draft</li></ul>
+<a class="more" href="../work/ebay.html">Read the eBay case &rarr;</a></div>
+</div></section>
+
+<section class="ch" id="photos">
+<p class="when">2019 to 2022 · Head of Design and Research</p>
+<h2>Amazon Photos</h2>
+<p class="claim">Functional is not lovable.</p>
+<div class="ev">
+<figure><img src="../img/amazon/cooper-launch-2-poster.jpg" alt=""><figcaption>Project Cooper, the rebuild, at launch.</figcaption></figure>
+<div><p>Cloud storage that happened to hold photos, trailing the native apps, underperforming for a Prime-bundled service. We tore it down and rebuilt it, research setting the order: show me my photos, help me find them fast. Tenets agreed with Dev and PM first, so three orgs decided from one set of criteria.</p>
+<ul class="stats"><li><b>6M</b>monthly active customers</li><li><b>61% to 78%</b>CSAT in six months</li><li><b>8 to 19</b>the team, adding research, motion, design technology</li></ul>
+<a class="more" href="../work/amazon.html">Read the Amazon case &rarr;</a></div>
+</div></section>
+
+<section class="ch" id="fashion">
+<p class="when">2015 to 2019 · Head of Design and Research</p>
+<h2>Amazon Fashion</h2>
+<p class="claim">Let people try it on first.</p>
+<div class="ev">
+<figure><img src="../img/amazon/wardrobe-box.jpg" alt=""><figcaption>Prime Wardrobe: fill a box, try at home, keep what fits.</figcaption></figure>
+<div><p>Under a tenth of US clothing spend was online, because a detail page is a poor fitting room. Prime Wardrobe took aim at that: I pitched and resourced the design and saw it through to launch. Luxury Stores followed, launched two years after we designed it and remarkably like the original.</p>
+<ul class="stats"><li><b>7 to 20</b>the team, adding program management, design technology, managers</li><li><b>Prime Wardrobe</b>concept to launch</li></ul>
+<a class="more" href="../work/amazon.html#fashion">Read the Amazon case &rarr;</a></div>
+</div></section>
+
+<section class="ch" id="earlier">
+<p class="when">2006 to 2015 · THANK YOU Studio, Nokia, Adobe</p>
+<h2>Earlier</h2>
+<p class="claim">Studios, systems, launches.</p>
+<div class="ev">
+<figure><img src="../img/earlier/fire-1.jpg" alt=""><figcaption>Kindle Fire HD launch for Amazon. THANK YOU Studio, 2012.</figcaption></figure>
+<div><p>Partner and VP of Product Design at THANK YOU Studio, San Francisco and Copenhagen: the Kindle Fire launch and the Fire Phone design system for Amazon, Toyota in-car navigation. Senior Director at Nokia, about 35 people across five cities, the MeeGo design system. Creative Director at Adobe, the Adobe.com redesign.</p>
+<a class="more" href="../work/earlier.html">See the earlier work &rarr;</a></div>
+</div></section>
+
+<section class="ch lead" id="lead">
+<p class="when">Across all of it</p>
+<h2>How I lead</h2>
+<p class="claim">Design is a business capability, and it earns that standing by being legible to the rest of the company.</p>
+<ul>
+<li>A team contract, written down: what I expect from the team and what they can expect from me.</li>
+<li>Tenets set with partners at the start, so the hard conversations happen once.</li>
+<li>A written definition of done.</li>
+<li>Ownership assigned by pattern, so every designer has something that is theirs.</li>
+<li>Staying hands-on with the tools, because the toolchain is changing and I want to understand it before I ask the team to.</li>
+</ul>
+<a class="more" href="../leadership.html">More on how I lead &rarr;</a>
+</section>
+
+<section class="ch contact" id="contact">
+<p class="when">Contact</p>
+<p><a href="mailto:kevinellis@gmail.com">kevinellis@gmail.com</a></p>
+<p>(415) 606-1720</p>
+<p><a href="https://www.linkedin.com/in/kevinellisdesign" rel="noopener">linkedin.com/in/kevinellisdesign</a></p>
+<p style="font-size:15px;color:var(--muted);margin-top:14px">Seattle, WA</p>
+</section>
+</main></div>
+<footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
+</div><script src="../js/gate.js"></script>
+<script>
+(function(){var links=[].slice.call(document.querySelectorAll('.rail a[data-for]'));var map={};links.forEach(function(a){map[a.dataset.for]=a});
+if(!('IntersectionObserver' in window))return;var cur=null;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(cur)cur.classList.remove('on');cur=map[e.target.id];if(cur)cur.classList.add('on');}})},{rootMargin:'-35% 0px -55% 0px'});
+Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});})();
+</script></body></html>
