@@ -1,21 +1,25 @@
 import os, time
+from iso import pipeline, skilltest, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes, gates
 V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
     r="../" if depth else ""; ON=' class="on"'
     nav="".join(f'<li><a href="{r}{h}"{ON if k==on else ""}>{t}</a></li>' for k,h,t in NAV)
+    brand='<span class="brand">Kevin Ellis</span>' if (on=="work" and not depth) else f'<a class="brand" href="{r}index.html">Kevin Ellis</a>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>{title}</title>
 <link rel="stylesheet" href="{r}css/site.css?v={V}"></head>
 <body class="locked{' dark' if dark else ''}"><div id="site">
-<div class="wrap"><header class="top"><a class="brand" href="{r}index.html">Kevin Ellis</a><nav><ul>{nav}</ul></nav></header></div>
+<div class="wrap"><header class="top">{brand}<nav><ul>{nav}</ul></nav></header></div>
 {body}
 <footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
 </div><script src="{r}js/gate.js?v={V}"></script><script src="{r}js/slides.js?v={V}"></script><script src="{r}js/video.js?v={V}"></script><script src="{r}js/tiles.js?v={V}"></script></body></html>'''
 
 def img(src, cap=""):
     return f'<figure><img src="{src}" alt="">{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def fig(svg, cap=""):
+    return f'<figure>{svg}{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slot(label, cap=""):
     return f'<figure><div class="slot">{label}</div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slides(srcs, cap=""):
@@ -29,7 +33,7 @@ def video(src, poster, cap="", controls=False, loop=True, maxw=None):
         return f'<figure{st}><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
     return f'<figure{st}><div class="vid"><video src="{src}" poster="{poster}" playsinline preload="metadata"></video><button class="play" aria-label="Play"></button></div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
-    if not left: cls=(cls+" textonly").strip()
+    if not left: cls=(cls+(" chapter" if '<h2 class="part">' in right else " textonly")).strip()
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
 def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
@@ -40,7 +44,7 @@ def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
     return body
 
 pages={}
-tiles=[("oracle","Oracle Health","oracle"),("amazon","Amazon","amazon"),("ebay","eBay","ebay"),("earlier","Earlier Work","earlier-2")]
+tiles=[("oracle","Oracle Health","oracle"),("amazon","Amazon","amazon"),("ebay","eBay","ebay"),("earlier","Earlier Work","earlier-3")]
 pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><div class="tiles">'+"".join(
     f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{f}.jpg" alt="{t}"><span>{t}</span></a>' for k,t,f in tiles)+'</div></div>',"work",dark=True)
 
@@ -90,7 +94,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>In 2015 the US spent roughly $300 billion on clothing and shoes, under a tenth of it online. Prime Wardrobe, born Prime Try Before You Buy, took aim at the weak point: judging a garment from a detail page.</p>
 <h3>Prime Wardrobe</h3>
 <p>Fill a box, shipped free, seven days to try, pay only for what you keep. I pitched and resourced the design with the product owner and executive leadership, and saw it through to launch. Prime Stylist, a curated box, followed.</p>'''),
- (img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
+ (video("../img/amazon/luxury-walkthrough.mp4","../img/amazon/luxury-walkthrough-poster.jpg","The early prototype that pitched Amazon Luxury, placeholder name X. Approved by executive leadership, it became the reference for the final experience. Click to play.",loop=False,maxw=320)+img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
   '''<h2>Luxury Stores</h2>
 <p>My last project there was the luxury brands exploration: a walled garden in Amazon's app, only the most exclusive fashion brands, minimal store presence, content carrying the experience. No legacy to design around. It launched more than two years after we designed it, remarkably like the original.</p>'''),
  (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
@@ -118,16 +122,16 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
 '''<ul class="facts">
-<li><b>Role</b> Partner and VP of Product Design, THANK YOU Studio, 2012 to 2015. Senior Director of UX Design, Nokia, 2009 to 2012. Creative Director, Adobe, 2006 to 2009.</li>
+<li><b>Roles</b> Partner and VP of Product Design, THANK YOU Studio, 2012 to 2015. Senior Director of UX Design, Nokia, 2009 to 2012. Creative Director, Adobe, 2006 to 2009.</li>
 <li><b>Team</b> Studios in San Francisco and Copenhagen. At Nokia, about 35 people across five cities.</li>
 <li><b>Work</b> Kindle Fire launch and Fire Phone design system for Amazon. Toyota in-car navigation. MeeGo OS design system and third-party app guidelines. Adobe.com redesign.</li>
 </ul>''',
  "2006 to 2015","earlier",[
  (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","Fire Phone for Amazon. THANK YOU Studio reel, sound on.",loop=False),""),
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
- (img("../img/earlier/toyota.jpg","Design exploration of Toyota's native in-car navigation system. THANK YOU Studio."),""),
- (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Our team focused on the MeeGo OS design system, as well as 3rd-party app guidelines."),""),
- ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design exploration of Toyota's native in-car navigation system."),"work",1)
+ (img("../img/earlier/toyota.jpg","Design explorations for Toyota's native in-car navigation system. THANK YOU Studio."),""),
+ (img("../img/earlier/nokia.jpg","My team owned comms apps for the Symbian OS, as well as the 3rd-party app reference designs for the N9 and the debut of the innovative MeeGo OS."),""),
+ ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design explorations for Toyota's native in-car navigation system."),"work",1)
 
 pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
  img("img/lead/birthday.jpg","Birthday tradition: everyone dresses as the birthday person.")
@@ -151,9 +155,10 @@ pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
 
 pages["about.html"]=shell("About",'<article class="case wrap">'+row('<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">',
  '''<h1>About</h1>
+<p class="lede">Design leader and inventor. Named on eight AI-centric patent applications filed by Oracle.</p>
 <p>I grew up in Alaska drawing and painting. I studied graphic design at California College of the Arts in San Francisco, then human-computer interaction and electronic communication design at Emily Carr University in Vancouver. My first digital work was for an agency in Reykjav&iacute;k, then Copenhagen, then back to San Francisco for design leadership roles at Adobe, Yahoo, Nokia, and eventually my own agency with partners in Copenhagen.</p>
 <p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, now Oracle Health, where I built the platform design organization for the clinical products.</p>
-<p>Twenty years of leading design teams. I build design organizations, the operating models they run on, and the AI-native tooling that changes how they work.</p>
+<p>I have 15+ years building and running product design and research organizations across marketplace, commerce, and enterprise software. I design for human needs, whether the person is a customer or an employee using the company's own tools. I owned the seller experience end to end at eBay, where my team shipped eBay's first generative AI feature; led consumer product design at Amazon; and now run a platform design org at Oracle Health. I build teams, set the operating model, and ship outcomes with Product and Engineering as equal partners.</p>
 <p class="meta">Seattle, WA</p>''',"head about")+'</article>',"about")
 
 pages["contact.html"]=shell("Contact",'<article class="case wrap">'+row('',
