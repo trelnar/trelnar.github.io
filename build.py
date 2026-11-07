@@ -54,17 +54,11 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams: no screens, no internal names, no customers.</p>''',
  "2024 to present","oracle",[
  # ------------------------------------------------------------ case 1
- ("",'''<h2 class="part">One worklist for every role</h2>
-<p class="case-lede">Dozens of role-specific lists became one platform pattern, the Action List, with messaging folded in.</p>'''),
- (fig(consolidate(),"Dozens of lists, one per team and role, became one pattern configured per role."),
-  '''<p>Clinicians got their work from dozens of places, each built for one role, each behaving differently. The ask grew into one pattern for every role, with one rule: anything the system interprets is teed up for review, never committed on its own.</p>'''),
- (fig(landing(),"What lands in the list, and how three roles see it."),
-  '''<p>Work lands in one place, and the list knows what each kind needs: a message until answered, a result until acknowledged, an order until signed. Messaging became an item in the list. Roles configure the list; they do not fork it.</p>'''),
- (fig(investigation(),"Three prongs, internal analysis first, one finding."),
-  '''<p>It shipped in 2025. When leadership relayed vague customer unhappiness, I investigated before reacting: feedback reread, design diffed against the build, usability tests, no customers contacted until the internal analysis was done. The finding: the same surface had four names across the company, and most feedback was filed where nobody could find it.</p>'''),
- (fig(skilltest(),"Same prompt, six runs. Without the skill, three answers. With it, one."),
-  '''<dl class="kv"><dt>My role</dt><dd>The pattern, the skill that carries its rules, and the investigation. The skill and a three-role demo became engineering leadership's reference example.</dd>
-<dt>Next time</dt><dd>The released build in front of designers from the first sprint. The diff found drift a live build would have caught earlier.</dd></dl>
+ ("",'<h2 class="part">From Inbox to Action List</h2>'),
+ (img("../img/oracle/action-list.png","From many disparate views, into one."),
+  '''<p>It started as a fix for the clinician inbox, a twenty-year-old design where results, refills, documents, and requests each sat in their own folder. Looking closer, the inbox was one instance of a platform-wide habit: every product team had built its own worklist, each with different features, rules, and edge cases.</p>
+<p>We flattened the inbox into a single “Action List” of the non-negotiable tasks a person owns that day, auto-triaged by role and by user. Once the list could absorb anything that needed doing, there was no reason for the other lists to exist.</p>
+<p>Action List became the one universal worklist pattern across the whole EHR: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>
 <p class="demo"><b>Clickthrough demo</b> <span class="pending">link to come</span></p>'''),
  # ------------------------------------------------------------ case 2
  ("",'''<h2 class="part">Experience Core, and the AI workflow behind it</h2>
