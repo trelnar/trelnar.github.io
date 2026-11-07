@@ -171,7 +171,7 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 
 pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
 '''<ul class="facts">
-<li><b>Role</b> Partner and VP of Product Design, THANK YOU Studio, 2012 to 2015. Senior Director of UX Design, Nokia, 2009 to 2012. Creative Director, Adobe, 2006 to 2009.</li>
+<li><b>Roles</b> Partner and VP of Product Design, THANK YOU Studio, 2012 to 2015. Senior Director of UX Design, Nokia, 2009 to 2012. Creative Director, Adobe, 2006 to 2009.</li>
 <li><b>Team</b> Studios in San Francisco and Copenhagen. At Nokia, about 35 people across five cities.</li>
 <li><b>Work</b> Kindle Fire launch and Fire Phone design system for Amazon. Toyota in-car navigation. MeeGo OS design system and third-party app guidelines. Adobe.com redesign.</li>
 </ul>''',
