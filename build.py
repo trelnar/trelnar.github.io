@@ -179,7 +179,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","Fire Phone for Amazon. THANK YOU Studio reel, sound on.",loop=False),""),
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
  (img("../img/earlier/toyota.jpg","Design exploration of Toyota's native in-car navigation system. THANK YOU Studio."),""),
- (img("../img/earlier/nokia.jpg","Nokia N9, MeeGo. Our team focused on the MeeGo OS design system, as well as 3rd-party app guidelines."),""),
+ (img("../img/earlier/nokia.jpg","My team owned comms apps for the Symbian OS, as well as the 3rd-party app reference designs for the N9 and the debut of the innovative MeeGo OS."),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design exploration of Toyota's native in-car navigation system."),"work",1)
 
 pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
