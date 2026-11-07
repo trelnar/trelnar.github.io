@@ -256,3 +256,17 @@ def modes():
     b += _t(300, 146, "one pattern, two modes", "b sm")
     b += _t(300, 166, "the discriminator is who authors the sequence and when,", "mu sm") + _t(300, 184, "not whether the screen adapts", "mu sm")
     return _svg((600, 200), b, label="Guided workflow as one pattern with two orchestration modes, structured and generative; the difference is who authors the sequence and when.")
+
+# D11. layout validation: three stages, three gates (replaces the internal jpg)
+def gates():
+    b = _marker(21)
+    stages = [("Rules", "interaction logic,", "usage, variants", "gate 1: design complete"),
+              ("Skill check", "layout, components,", "interviews", "gate 2: skill validated"),
+              ("Foundation", "approved, accessible,", "published", "gate 3: ready to release")]
+    for i, (t, s1, s2, g) in enumerate(stages):
+        x = 12 + i * 200
+        b += f'<rect x="{x}" y="20" width="176" height="92" rx="6" class="bx{" ac" if i==2 else ""}"/>' + _t(x + 88, 44, t, "b") + _t(x + 88, 68, s1, "mu sm") + _t(x + 88, 88, s2, "mu sm")
+        if i < 2: b += _arrow(f"M{x+176} 66H{x+198}", 21)
+        b += f'<line x1="{x+88}" y1="112" x2="{x+88}" y2="134" class="ln dash"/>' + _t(x + 88, 150, g, "sm")
+    b += _t(300, 184, "one definition of done for every layout", "mu sm")
+    return _svg((600, 200), b, label="Layout validation: three stages, rules, skill check, foundation, each closed by a gate.")

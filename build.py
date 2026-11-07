@@ -1,5 +1,5 @@
 import os, time
-from diagrams import pipeline, skilltest, roles, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes
+from diagrams import pipeline, skilltest, roles, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes, gates
 V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
@@ -33,7 +33,7 @@ def video(src, poster, cap="", controls=False, loop=True, maxw=None):
         return f'<figure{st}><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
     return f'<figure{st}><div class="vid"><video src="{src}" poster="{poster}" playsinline preload="metadata"></video><button class="play" aria-label="Play"></button></div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
-    if not left: cls=(cls+" textonly").strip()
+    if not left: cls=(cls+(" chapter" if '<h2 class="part">' in right else " textonly")).strip()
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
 
 def case(title, lede, year, hero, rows, prev, nxt, herocap=""):
@@ -49,78 +49,50 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
     f'<a class="tile" href="work/{k}.html"><img src="img/tiles/{f}.jpg" alt="{t}"><span>{t}</span></a>' for k,t,f in tiles)+'</div></div>',"work",dark=True)
 
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
-'''<ul class="facts">
-<li><b>Role</b> Director, User Experience Design. 2024 to present.</li>
-<li><b>Team</b> Experience Core, the platform design team I formed. Nine designers. One design standard across the product organizations and dozens of clinician-facing applications.</li>
-<li><b>Work</b> The core task-management experience for an AI-native EHR. Platform patterns, components, design system, research practice, and the team's AI workflow. Named inventor on eight AI-centric patent applications filed by Oracle.</li>
-</ul>
-<p>I joined Oracle Health to lead the design of the core task-management experience for an AI-native EHR. It started with ambulatory clinical workflows and grew into taking dozens of one-off legacy experiences and combining them into one universal pattern for every role across the whole product: ambulatory, acute, reimbursement, patient administration.</p>
-<p>Out of that work I formed Experience Core, our platform design team. We set one design standard across the product organizations for shared components and interaction patterns, with tight integration into engineering so what we design is what ships. I also built the team's AI workflows with engineering, which took concept-to-testable-prototype from weeks to days. That work produced eight AI patent applications I am a named inventor on.</p>
-<p class="caveat">Three cases follow. Most of the work is unreleased and stays inside Oracle, so each is told through method, diagrams, and outcomes: no product screens, no internal names, no customers.</p>''',
+'''<p class="lede">Director, User Experience Design, 2024 to present.</p>
+<p>I joined Oracle Health to lead the design of the core task-management experience for an AI-native EHR. It started with ambulatory clinical workflows and grew into one universal pattern for every role across the whole product. Out of that work I formed Experience Core, our platform design team, and built its AI workflows with engineering, which took concept-to-testable-prototype from weeks to days. That work produced eight AI patent applications I am a named inventor on.</p>
+<p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams: no screens, no internal names, no customers.</p>''',
  "2024 to present","oracle",[
  # ------------------------------------------------------------ case 1
+ ("",'''<h2 class="part">One worklist for every role</h2>
+<p class="case-lede">Dozens of role-specific lists became one platform pattern, the Action List, with messaging folded in.</p>'''),
  (fig(consolidate(),"Dozens of lists, one per team and role, became one pattern configured per role."),
-  '''<p class="case-label">Case 1</p><h2 class="part">One worklist for every role</h2>
-<h3>The problem</h3>
-<p>Clinicians got their work from dozens of places: an inbox for messages, a results queue, orders waiting for a signature, requests from other roles, reminders from the system. Each had been built once, by one team, for one role, and each behaved differently. A physician learned one set of habits, a nurse another, the front desk a third, and the same item could show up in three of them.</p>
-<p>The ask was to start with ambulatory clinical workflows. It grew into taking the one-off legacy experiences across the product and combining them into one universal pattern for every role.</p>
-<h3>Constraints</h3>
-<p>Safety first: anything the system interprets or suggests is teed up for a clinician to review, never committed on its own. Several product organizations, each with its own release train. A legal rule on certain words that shaped the naming. And legacy surfaces that had to keep working while the new pattern replaced them one at a time.</p>'''),
+  '''<p>Clinicians got their work from dozens of places, each built for one role, each behaving differently. The ask grew into one pattern for every role, with one rule: anything the system interprets is teed up for review, never committed on its own.</p>'''),
  (fig(landing(),"What lands in the list, and how three roles see it."),
-  '''<h3>The approach</h3>
-<p>I designed the pattern first as a clinician inbox, and it was elevated to the platform worklist, the Action List. The rule underneath it is simple: work lands in one place, and the list knows what to do with each kind of work. A message is work until it is answered. A result is work until it is acknowledged. An order is work until it is signed. Messaging stopped being a separate application and became a kind of item in the list, answered in place and handed to the right role when the question belongs to someone else.</p>
-<p>Roles configure the list; they do not fork it. The physician sees fewer items, weighted to decisions. The nurse sees more, weighted to execution and follow-up. The front desk sees scheduling and paperwork and nothing clinical. One pattern, three experiences, because the configuration knows what each role is there to do.</p>'''),
- (fig(investigation(),"The investigation: three prongs, internal analysis first, one finding."),
-  '''<h3>What changed</h3>
-<p>The Action List shipped in 2025 and is in customers' hands. When leadership relayed that customers were unhappy with it, with no specifics, I ran an investigation instead of reacting: product feedback gathered and reread, a diff of the design against the released build, usability testing, and a rule that no customer was contacted until the internal analysis was done. The finding was a taxonomy failure in our own feedback data. The same surface had four names across the company, and most of the feedback was filed under other components where nobody could find it. The team got a corrected reference set, and the fixes had evidence behind them.</p>'''),
+  '''<p>Work lands in one place, and the list knows what each kind needs: a message until answered, a result until acknowledged, an order until signed. Messaging became an item in the list. Roles configure the list; they do not fork it.</p>'''),
+ (fig(investigation(),"Three prongs, internal analysis first, one finding."),
+  '''<p>It shipped in 2025. When leadership relayed vague customer unhappiness, I investigated before reacting: feedback reread, design diffed against the build, usability tests, no customers contacted until the internal analysis was done. The finding: the same surface had four names across the company, and most feedback was filed where nobody could find it.</p>'''),
  (fig(skilltest(),"Same prompt, six runs. Without the skill, three answers. With it, one."),
-  '''<h3>My role</h3>
-<p>I designed the original pattern, wrote the skill that carries its rules, when it applies, what it holds, how it is configured, and led the investigation. The skill and a three-role demo became the reference example senior engineering leadership pointed to.</p>
-<h3>What I would do differently</h3>
-<p>Put the released build in front of the design team from the first sprint. The diff analysis found drift between what we designed and what shipped that a live reference build would have caught months earlier.</p>
+  '''<dl class="kv"><dt>My role</dt><dd>The pattern, the skill that carries its rules, and the investigation. The skill and a three-role demo became engineering leadership's reference example.</dd>
+<dt>Next time</dt><dd>The released build in front of designers from the first sprint. The diff found drift a live build would have caught earlier.</dd></dl>
 <p class="demo"><b>Clickthrough demo</b> <span class="pending">link to come</span></p>'''),
  # ------------------------------------------------------------ case 2
+ ("",'''<h2 class="part">Experience Core, and the AI workflow behind it</h2>
+<p class="case-lede">A platform design team that did not exist, and a workflow that cut concept-to-prototype from weeks to days.</p>'''),
  (fig(org(),"One platform team between the product organizations and engineering."),
-  '''<p class="case-label">Case 2</p><h2 class="part">Experience Core, and the AI workflow behind it</h2>
-<h3>The problem</h3>
-<p>Every product organization designed its own version of the same things: lists, panels, notifications, search, page layouts. There was no platform design function, so there was no one standard, and engineering rebuilt the same component in several shapes. The worklist work made the gap obvious: a universal pattern needs a universal owner.</p>
-<h3>Constraints</h3>
-<p>The team did not exist. I had to make the case for it, staff it, and prove it, while a parallel AI effort ran its own track that leadership had not yet reconciled with ours. Clinician-facing software also carries accessibility and regulatory obligations that a pattern library has to satisfy once, for everyone.</p>'''),
+  '''<p>Every product organization designed its own lists, panels, and layouts. A universal pattern needs a universal owner. I made the case for Experience Core, staffed it, and aligned it in sequence: pillar leads, then SVP peers, then the top.</p>'''),
  (fig(journey(),"Thirty-four patterns, six stages, ownership by stretch of journey."),
-  '''<h3>Forming the team</h3>
-<p>I proposed Experience Core as the platform design team: shared components, interaction patterns, the design system, and the research practice, with one standard across the product organizations and tight integration into engineering so what we design is what ships. We inherited thirty-four patterns and no structure. I grouped them by the clinician's journey, access, triage, interpret, execute, collaborate, follow up, and assigned ownership by pattern, so every designer owned a stretch of journey rather than a pile of components. Alignment went in sequence: eight engineering and product pillar leads first, then SVP peers, then the top.</p>'''),
- (fig(pipeline(),"Intent in, prototype out, customers in the loop. What took weeks takes days."),
-  '''<h3>The AI workflow</h3>
-<p>With engineering I rebuilt how the team produces. The comp stopped being the deliverable; the rules did. Components get guidelines, reference a person or a model can look up. Layouts and patterns get skills, which carry the judgment of when, when not, and how. A skill selects and configures. It does not code. I wrote the first skills myself, then gave each designer a pattern and its skill. Around that sits a prototyping pipeline, custom tooling, and a shared skill library in the team repo. An intent goes in, a brief, a frame, a data file, and a working prototype comes out.</p>'''),
- (img("../img/oracle/layout-validation.jpg","Three stages, three gates, one definition of done for every layout."),
-  '''<h3>What changed</h3>
-<p>Concept to testable prototype went from weeks to days, and the team validates more concepts per cycle with customers, because a prototype is now cheap enough to be wrong. One design standard holds across the product organizations and dozens of clinician-facing applications, with WCAG 2.1 AA as a gate rather than a hope. A written definition of done, three gates and a release approval, ended the misalignment that had kept layouts from landing. The work produced eight AI patent applications I am a named inventor on.</p>'''),
- (img("../img/oracle/codex-learning-day.jpg","Learning day. Every designer shipped a working prototype in one session. None of it is product; all of it is the new muscle."),
-  '''<h3>My role</h3>
-<p>I proposed the team, built it, and lead it. I wrote the first skills and ran the learning day where every designer shipped a working prototype in one session, none of it product, all of it the new muscle.</p>
-<h3>What I would do differently</h3>
-<p>Write the definition of done before the first layout, not after the first misalignment. The gates were cheap to write and expensive to be without.</p>'''),
+  '''<p>Thirty-four inherited patterns, no structure. I grouped them by the clinician's journey and gave each designer a stretch of journey rather than a pile of components.</p>'''),
+ (fig(pipeline(),"Intent in, prototype out, customers in the loop."),
+  '''<p>The comp stopped being the deliverable; the rules did. Components get guidelines; layouts and patterns get skills, which carry the judgment of when, when not, and how. Intent in, working prototype out.</p>'''),
+ (fig(gates(),"Three stages, three gates, one definition of done for every layout."),
+  '''<p>A written definition of done, three gates and a release approval, ended the misalignment that kept layouts from landing. WCAG 2.1 AA is a gate, not a hope.</p>'''),
+ (img("../img/oracle/codex-learning-day.jpg","Learning day. Every designer shipped a working prototype in one session."),
+  '''<dl class="kv"><dt>My role</dt><dd>Proposed the team, built it, lead it. Wrote the first skills and ran the learning day.</dd>
+<dt>Next time</dt><dd>The definition of done before the first layout, not after the first misalignment.</dd></dl>'''),
  # ------------------------------------------------------------ case 3
+ ("",'''<h2 class="part">AI-native UX: where the system speaks, and where it stops</h2>
+<p class="case-lede">One set of rules for how, and how much, the system talks to a clinician.</p>'''),
  (fig(boundary(),"Three patterns, one boundary."),
-  '''<p class="case-label">Case 3</p><h2 class="part">AI-native UX: where the system speaks, and where it stops</h2>
-<h3>The problem</h3>
-<p>In an AI-native EHR the system has something to say on nearly every screen: a result came back, a guideline applies, a draft is ready, a set of tasks could be bundled. Left to each product team, that becomes a different voice on every surface, and a clinician who cannot tell a fact from a suggestion from a to-do. I led the design for how and when the system surfaces AI output to clinicians across the clinical workflows.</p>
-<h3>Constraints</h3>
-<p>Nothing the system interprets or suggests commits without a clinician's review. That is a regulatory line as well as a design one. Alarm fatigue is a patient-safety risk, so every interruption has to earn its place. A legal constraint ruled out a word the whole industry uses, which forced better naming. And all of it has to be accessible.</p>'''),
+  '''<p>The system has something to say on nearly every screen, and a clinician has to tell a fact from a suggestion from a to-do. I drew the line: notifications assert facts, guidance proposes decisions, the worklist holds work.</p>'''),
  (fig(ladder(),"The interruption ladder: five rungs, from ambient to a person."),
-  '''<h3>Three patterns, one boundary</h3>
-<p>I drew the line between three things teams kept blurring. The notification pattern asserts facts: the state of the world changed. Guidance proposes decisions. The worklist holds work. A fact can lead to a proposal, and an accepted proposal becomes work, but each lives in its own pattern with its own rules. I authored the notification pattern for the whole product: one notification object model, a five-class severity taxonomy, and an interruption ladder with five rungs, ambient, passive, active, disruptive, and escalation to a person. The system interrupts only as much as the situation needs, and the rules say which situations need what.</p>'''),
+  '''<p>I authored the notification pattern: one object model, a five-class severity taxonomy, an interruption ladder from ambient to a person. Alarm fatigue is a patient-safety risk, so the system interrupts only as much as the situation needs.</p>'''),
  (fig(teeup(),"Teed up, never auto-added. The system drafts; the clinician decides."),
-  '''<h3>Teed up, never auto-added</h3>
-<p>For AI output the rule is the same everywhere: the system drafts, the clinician decides. When an agent parses a spoken list of problems, medications, and orders, it tees them up in one review space where the clinician edits, removes, and signs once, and the system commits in the right order underneath, diagnoses before the orders that depend on them. Accept, edit, reject, escalate: those four verbs are the whole interaction, on every AI surface. Clinical leadership validated the direction.</p>
-<p>Guided workflows got a point of view too: one pattern with two orchestration modes, structured and generative. The difference is who authors the sequence and when, not whether the screen adapts.</p>'''),
+  '''<p>The system drafts, the clinician decides. A spoken list of problems, medications, and orders is teed up in one review space, signed once, and committed in the right order. Accept, edit, reject, escalate: four verbs on every AI surface.</p>'''),
  (fig(modes(),"Guided workflow: one pattern, two modes."),
-  '''<h3>What changed</h3>
-<p>The patterns gave product teams anchors to build on instead of inventing their own, and gave engineering one set of behaviors to implement. The thinking here underlies several of the eight AI patent applications I am named on. The filings are confidential, so this page describes the reasoning, not the claims.</p>
-<h3>My role</h3>
-<p>Program owner for the notification pattern and its specification. Author of the guided-workflow point of view. Design lead for AI output across the clinical workflows, with the multi-add direction validated by clinical leadership.</p>
-<h3>What I would do differently</h3>
-<p>Name the modes earlier. "AI mode" lived as a label for too long before it was renamed for what it does, and every week it survived, teams designed to the label.</p>'''),
+  '''<p>Guided workflows are one pattern with two modes, structured and generative; the difference is who authors the sequence, and when. Several of the eight patent applications come from this thinking. The filings are confidential, so this page describes the reasoning, not the claims.</p>
+<dl class="kv"><dt>My role</dt><dd>Program owner for the notification pattern; design lead for AI output across the clinical workflows.</dd>
+<dt>Next time</dt><dd>Name the modes earlier. "AI mode" survived as a label too long, and teams designed to the label.</dd></dl>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",

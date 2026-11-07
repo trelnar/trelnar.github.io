@@ -111,3 +111,14 @@ ul.facts b{font-weight:600;text-align:right}
 .row .col-text h3:first-child{margin-top:0}
 .demo{margin-top:22px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:15px}
 .demo .pending{color:var(--muted);font-style:italic}
+/* oracle: chapters */
+.row.chapter{grid-template-columns:1fr;border-top:2px solid var(--ink);padding:40px 0 4px;margin-top:40px}
+.row.chapter .col-img{display:none}.row.chapter .col-text{max-width:760px}
+.row.chapter h2.part{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-.01em;margin:0 0 12px}
+.case-lede{color:var(--muted);font-size:19px;line-height:1.45;margin:0 0 8px}
+.row.chapter+.row{border-top:0;padding-top:16px}
+dl.kv{margin:0;padding:0;display:grid;grid-template-columns:6.5em 1fr;column-gap:14px;row-gap:12px;font-size:15px;line-height:1.5}
+dl.kv dt{font-weight:600;margin:0}dl.kv dd{margin:0;color:var(--ink)}
+p+dl.kv{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.demo{margin-top:20px;padding:0;border:0;border-radius:0;font-size:15px}
+@media (max-width:820px){.row.chapter h2.part{font-size:32px}.row.chapter{margin-top:16px;padding-top:28px}}
