@@ -122,3 +122,18 @@ dl.kv dt{font-weight:600;margin:0}dl.kv dd{margin:0;color:var(--ink)}
 p+dl.kv{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
 .demo{margin-top:20px;padding:0;border:0;border-radius:0;font-size:15px}
 @media (max-width:820px){.row.chapter h2.part{font-size:32px}.row.chapter{margin-top:16px;padding-top:28px}}
+/* isometric diagrams */
+:root{--iso-side:#ecebe6;--iso-line:#5a5a55;--iso-dim:#b3b2ab}
+@media (prefers-color-scheme: dark){:root{--iso-side:#222;--iso-line:#a8a8a2;--iso-dim:#4f4f4b}}
+.dg.iso{border:1px dashed var(--iso-dim);border-radius:12px}
+.dg.iso path,.dg.iso circle{stroke-width:1.1;stroke-linejoin:round;stroke-linecap:round}
+.dg.iso .top{fill:var(--bg);stroke:var(--iso-line)}
+.dg.iso .side{fill:var(--iso-side);stroke:var(--iso-line)}
+.dg.iso .ink{fill:var(--ink);stroke:var(--ink)}
+.dg.iso .ghost{fill:none;stroke:var(--iso-dim);stroke-dasharray:2.5 3.5}
+.dg.iso .dash{fill:none;stroke:var(--iso-dim);stroke-dasharray:2.5 3.5}
+.dg.iso .ln{fill:none;stroke:var(--iso-line)}
+.dg.iso .node{fill:var(--card);stroke:var(--iso-line)}
+.dg.iso .bar{fill:var(--iso-side);stroke:var(--iso-line)}
+.dg.iso .inkbar{fill:var(--ink);stroke:var(--ink)}
+.dg.iso text{font-size:13px}

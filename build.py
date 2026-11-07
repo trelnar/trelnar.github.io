@@ -1,5 +1,5 @@
 import os, time
-from diagrams import pipeline, skilltest, roles, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes, gates
+from iso import pipeline, skilltest, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes, gates
 V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
