@@ -104,3 +104,10 @@ ul.facts b{font-weight:600;text-align:right}
 .dg .bar{fill:var(--line)}.dg .tick{stroke:var(--muted);stroke-width:1}
 .dg .wire{fill:none;stroke:var(--muted);stroke-width:1.2}.dg .wire.ac{stroke:var(--accent)}
 .dg .rowbx{fill:var(--bg);stroke:var(--line);stroke-width:1}
+/* cases */
+.case-label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.row .col-text h2.part{margin-top:0}
+.row .col-text h3{margin:22px 0 6px;font-size:17px}
+.row .col-text h3:first-child{margin-top:0}
+.demo{margin-top:22px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:15px}
+.demo .pending{color:var(--muted);font-style:italic}
