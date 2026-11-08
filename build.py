@@ -68,7 +68,8 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  # ------------------------------------------------------------ case 3
  ("",'<h2 class="part">From intent to working code</h2>'),
  (img("../img/oracle/ai-ux-platform.png","The platform, end to end: intent in, guidelines and context pulled from the design system, a spec and a working prototype out, triaged to the right team. Click to enlarge.",href="../img/oracle/ai-ux-platform.png"),
-  '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>'''),
+  '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
+<p>Going from concept to testable prototype has gone from weeks to days, and every team now works from the same source of truth.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
