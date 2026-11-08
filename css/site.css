@@ -138,3 +138,4 @@ p+dl.kv{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
 .dg.iso .inkbar{fill:var(--ink);stroke:var(--ink)}
 .dg.iso text{font-size:13px}
 mark{background:#fff3a0;color:#111;padding:0 .15em;border-radius:2px}
+.dg.warm{background:none}.dg.warm text{fill:#f6f1dc}
