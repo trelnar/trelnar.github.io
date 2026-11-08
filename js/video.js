@@ -1,4 +1,4 @@
-document.querySelectorAll('.vid').forEach(function(w){
+document.querySelectorAll('.vid:not(.lb)').forEach(function(w){
   var v=w.querySelector('video'), b=w.querySelector('.play');
   function start(){ w.classList.add('playing'); v.controls=true; v.play(); }
   function reset(){ w.classList.remove('playing'); v.controls=false; v.load(); }

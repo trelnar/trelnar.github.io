@@ -14,7 +14,7 @@ def shell(title, body, on, depth=0, dark=False):
 <div class="wrap"><header class="top">{brand}<nav><ul>{nav}</ul></nav></header></div>
 {body}
 <footer>Kevin Ellis, 2026. Employer and client work is shown at the level of method and outcomes; unreleased designs, customer names, and internal data are excluded.</footer>
-</div><script src="{r}js/gate.js?v={V}"></script><script src="{r}js/slides.js?v={V}"></script><script src="{r}js/video.js?v={V}"></script><script src="{r}js/tiles.js?v={V}"></script></body></html>'''
+</div><script src="{r}js/gate.js?v={V}"></script><script src="{r}js/slides.js?v={V}"></script><script src="{r}js/video.js?v={V}"></script><script src="{r}js/lightbox.js?v={V}"></script><script src="{r}js/tiles.js?v={V}"></script></body></html>'''
 
 def img(src, cap="", href=None):
     im=f'<img src="{src}" alt="">'
@@ -34,6 +34,8 @@ def video(src, poster, cap="", controls=False, loop=True, maxw=None):
         attrs = "autoplay muted loop playsinline" + (" controls" if controls else "")
         return f'<figure{st}><video src="{src}" poster="{poster}" {attrs}></video>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
     return f'<figure{st}><div class="vid"><video src="{src}" poster="{poster}" playsinline preload="metadata"></video><button class="play" aria-label="Play"></button></div>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def vidlayer(thumb, src, cap=""):
+    return f'<figure><a class="vid lb" href="{src}" data-video="{src}" aria-label="Play video"><img src="{thumb}" alt=""><span class="play" aria-hidden="true"></span></a>{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def row(left, right, cls=""):
     if not left: cls=(cls+(" chapter" if '<h2 class="part">' in right else " textonly")).strip()
     return f'<div class="row {cls}"><div class="col-img">{left}</div><div class="col-text">{right}</div></div>\n'
@@ -96,7 +98,7 @@ pages["work/amazon.html"]=shell("Amazon",case("Amazon",
 <p>In 2015 the US spent roughly $300 billion on clothing and shoes, under a tenth of it online. Prime Wardrobe, born Prime Try Before You Buy, took aim at the weak point: judging a garment from a detail page.</p>
 <h3>Prime Wardrobe</h3>
 <p>Fill a box, shipped free, seven days to try, pay only for what you keep. I pitched and resourced the design with the product owner and executive leadership, and saw it through to launch. Prime Stylist, a curated box, followed.</p>'''),
- (video("../img/amazon/luxury-walkthrough.mp4","../img/amazon/luxury-walkthrough-poster.jpg","The early prototype that pitched Amazon Luxury, placeholder name X. Approved by executive leadership, it became the reference for the final experience. Click to play.",loop=False,maxw=320)+img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
+ (vidlayer("../img/amazon/luxury-thumb.jpg","../img/amazon/luxury-walkthrough.mp4","The early prototype that pitched Amazon Luxury, placeholder name X. Approved by executive leadership, it became the reference for the final experience. Click to play.")+img("../img/amazon/luxury.jpg","Early concept work for Amazon Luxury."),
   '''<h2>Luxury Stores</h2>
 <p>My last project there was the luxury brands exploration: a walled garden in Amazon's app, only the most exclusive fashion brands, minimal store presence, content carrying the experience. No legacy to design around. It launched more than two years after we designed it, remarkably like the original.</p>'''),
  (img("../img/amazon/fashion-detail-page.jpg","Rethinking the product detail page for a more content-led, fashion-centric interaction."),
