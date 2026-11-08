@@ -52,13 +52,14 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
 
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 '''<p class="lede">Director, User Experience Design, 2024 to present.</p>
-<p>I joined Oracle Health to lead the design of the core task-management experience for an AI-native EHR. It started with ambulatory clinical workflows and grew into one universal pattern for every role across the whole product. Out of that work I formed Experience Core, our platform design team, and built its AI workflows with engineering, which took concept-to-testable-prototype from weeks to days. That work produced eight AI patent applications I am a named inventor on.</p>
+<p>I joined Oracle Health to lead the design of the core task-management experience for an AI-native EHR. It started with ambulatory clinical workflows and grew into one universal pattern for every role across the whole product. Out of that work I formed Experience Core, our platform design team, and built its AI workflows with engineering, which took concept-to-testable-prototype from weeks to days. This work has resulted in <mark>nine AI patent applications I am a named inventor on.</mark></p>
 <p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams.</p>''',
  "2024 to present","oracle",[
  # ------------------------------------------------------------ case 1
  (img("../img/oracle/action-list.png","From many disparate views, into one."),
   '''<h2>From Inbox to Action List</h2>
-<p>What started as a fix for the clinician inbox is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>'''),
+<p>What started as a fix for the clinician inbox is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>
+<p><em>Public release of this experience is set for Oracle Health Summit, Q1 2027.</em></p>'''),
  # ------------------------------------------------------------ case 2
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician’s journey. The team is organized the same way."),
   '''<h2>Experience Core</h2>
