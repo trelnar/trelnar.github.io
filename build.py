@@ -70,7 +70,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  (img("../img/oracle/ai-ux-platform.png","The platform, end to end: intent in, guidelines and context pulled from the design system, a spec and a working prototype out, triaged to the right team. Click to enlarge.",href="../img/oracle/ai-ux-platform.png"),
   '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
 <p>Going from concept to testable prototype has gone from weeks to days, and every team now works from the same source of truth.</p>'''),
- (img("../img/oracle/codex-learning-day.jpg","Learning day. Every designer left with a working prototype. Click to enlarge.",href="../img/oracle/codex-learning-day.jpg"),
+ (img("../img/oracle/learning-day.jpg","Learning day. Every designer left with a working prototype. Click to enlarge.",href="../img/oracle/learning-day.jpg"),
   '''<p>AI talk in tech has come rapid-fire, and for a lot of people it is overwhelming. The way through is together: get the team in a room, have some fun with the tools, and get comfortable before it counts. We did that, and this is what came out of it.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
