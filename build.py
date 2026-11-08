@@ -16,8 +16,10 @@ def shell(title, body, on, depth=0, dark=False):
 <footer>Kevin Ellis, 2026. Oracle Health work is described at the level of method and structure; unreleased designs, customer names, and internal data are excluded.</footer>
 </div><script src="{r}js/gate.js?v={V}"></script><script src="{r}js/slides.js?v={V}"></script><script src="{r}js/video.js?v={V}"></script><script src="{r}js/tiles.js?v={V}"></script></body></html>'''
 
-def img(src, cap=""):
-    return f'<figure><img src="{src}" alt="">{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
+def img(src, cap="", href=None):
+    im=f'<img src="{src}" alt="">'
+    if href: im=f'<a href="{href}" target="_blank" rel="noopener" title="Open full size">{im}</a>'
+    return f'<figure>{im}{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def fig(svg, cap=""):
     return f'<figure>{svg}{"<figcaption>"+cap+"</figcaption>" if cap else ""}</figure>'
 def slot(label, cap=""):
@@ -64,18 +66,11 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p>I rebuilt the team around the clinician’s journey instead of the pattern list. Six segments, each with a lead designer and research partner who own their segment, end to end. We called ourselves Experience Core.</p>
 <p>The team runs on six habits. Concepts, components, and guidelines define what we make. Cadence, governance, and evangelism define how we work. Guidance lives where the work lives, not in redlines, but in a living, coded reference app.</p>'''),
  # ------------------------------------------------------------ case 3
- ("",'''<h2 class="part">AI-native UX: where the system speaks, and where it stops</h2>
-<p class="case-lede">One set of rules for how, and how much, the system talks to a clinician.</p>'''),
- (fig(boundary(),"Three patterns, one boundary."),
-  '''<p>The system has something to say on nearly every screen, and a clinician has to tell a fact from a suggestion from a to-do. I drew the line: notifications assert facts, guidance proposes decisions, the worklist holds work.</p>'''),
- (fig(ladder(),"The interruption ladder: five rungs, from ambient to a person."),
-  '''<p>I authored the notification pattern: one object model, a five-class severity taxonomy, an interruption ladder from ambient to a person. Alarm fatigue is a patient-safety risk, so the system interrupts only as much as the situation needs.</p>'''),
- (fig(teeup(),"Teed up, never auto-added. The system drafts; the clinician decides."),
-  '''<p>The system drafts, the clinician decides. A spoken list of problems, medications, and orders is teed up in one review space, signed once, and committed in the right order. Accept, edit, reject, escalate: four verbs on every AI surface.</p>'''),
- (fig(modes(),"Guided workflow: one pattern, two modes."),
-  '''<p>Guided workflows are one pattern with two modes, structured and generative; the difference is who authors the sequence, and when. Several of the eight patent applications come from this thinking. The filings are confidential, so this page describes the reasoning, not the claims.</p>
-<dl class="kv"><dt>My role</dt><dd>Program owner for the notification pattern; design lead for AI output across the clinical workflows.</dd>
-<dt>Next time</dt><dd>Name the modes earlier. "AI mode" survived as a label too long, and teams designed to the label.</dd></dl>'''),
+ ("",'<h2 class="part">From intent to working code</h2>'),
+ (img("../img/oracle/ai-ux-platform.png","The platform, end to end: intent in, guidelines and context pulled from the design system, a spec and a working prototype out, triaged to the right team. Click to enlarge.",href="../img/oracle/ai-ux-platform.png"),
+  '''<p>The handoff was the slow part. Designers made comps, wrote specs, and waited; engineers rebuilt what the comps implied and guessed at the rest.</p>
+<p>We rebuilt the process around a shared platform instead. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
+<p>Concept to testable prototype went from weeks to days, and every team now works from the same source of truth.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
