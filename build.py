@@ -1,6 +1,5 @@
 import os, time
 from iso import pipeline, skilltest, consolidate, landing, investigation, org, journey, boundary, ladder, teeup, modes, gates
-from warm import listing as ebay_listing
 V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
@@ -117,7 +116,7 @@ pages["work/ebay.html"]=shell("eBay",case("eBay",
 <p>Most listings had no description. Between two similar items, buyers almost always chose the one that did. My team designed and shipped the Magical Listing Tool with eBay's AI team, concept to launch, September 2023. It drafts title, description, and item specifics. The first of a set of tools that take the effort out of listing: a photo, or a video with voice-over, and the rest follows.</p>
 <p><span class="stat"><b>30%</b>of daily US app sellers tried it in the first weeks</span> <span class="stat"><b>95%+</b>of those kept the AI draft, with or without edits</span> <span class="stat"><b>80%+</b>CSAT</span></p>
 <p class="meta">Figures from <a href="https://innovation.ebayinc.com/stories/magical-listing-tool-harnesses-the-power-of-ai-to-make-selling-on-ebay-faster-easier-and-more-accurate/" rel="noopener">eBay's launch post</a>. Named Best Overall Generative AI Solution in the <a href="https://innovation.ebayinc.com/stories/ebays-magical-listing-tool-wins-ai-breakthrough-award-for-best-overall-generative-ai-solution/" rel="noopener">AI Breakthrough Awards</a>.</p>'''),
- (fig(ebay_listing(),"Give us a photo, a title, a number on the box. The listing fills itself in, and asks only for what it cannot infer."),
+ (img("../img/ebay/quicklist.jpg","Start with a photo or a barcode, and the listing fills itself in."),
   '''<h2>The future of listing</h2>
 <p>Listing was the hardest thing we asked sellers to do, and a decade of fixes had left a dozen flows. The strategy we set in 2023 reduced it to two questions, what am I selling and how am I selling it, and the first one is the whole game. Answer it from whatever the seller has, a photo, a title, a number on a box, and fill in the rest.</p>
 <p>Three rules carried the design: always listen, simply ask, be invisible. We proved the matching in a test harness before anyone built a screen, and ran discovery alongside delivery so the long-term work stopped losing to the next release.</p>'''),
