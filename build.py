@@ -62,7 +62,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p class="demo"><b>Clickthrough demo</b> <span class="pending">link to come</span></p>'''),
  # ------------------------------------------------------------ case 2
  ("",'<h2 class="part">Experience Core</h2>'),
- (fig(journey(),"Thirty-four patterns, six stages of the clinician’s journey, ownership by stretch of journey."),
+ (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician’s journey. The team is organized the same way."),
   '''<p>Oracle Health already had a patterns team and a shared goal of one design language. What it lacked was structure: thirty-four patterns, several managers, no single thread of ownership.</p>
 <p>I rebuilt the team around the clinician’s journey instead of the pattern list. Six segments, each with a lead designer and research partner who own their segment, end to end. We called ourselves Experience Core.</p>
 <p>The team runs on six habits. Concepts, components, and guidelines define what we make. Cadence, governance, and evangelism define how we work. Guidance lives where the work lives, not in redlines, but in a living, coded reference app.</p>'''),
