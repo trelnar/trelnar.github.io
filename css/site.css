@@ -7,7 +7,7 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 header.top{display:flex;align-items:center;justify-content:space-between;padding:28px 0 22px}
 header.top .brand{font-weight:700;letter-spacing:.06em;font-size:16px;color:var(--ink);text-transform:uppercase}
 header.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-header.top nav a{color:var(--muted)}header.top nav a:hover,header.top nav a.on{color:var(--ink);text-decoration:none}
+header.top nav a{color:var(--muted)}header.top nav a:hover,header.top nav a.on,header.top nav span.on{color:var(--ink);text-decoration:none}
 @media (max-width:640px){header.top{flex-direction:column;align-items:flex-start;gap:12px}header.top nav ul{gap:14px;flex-wrap:wrap}}
 .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:8px 0 40px}
 @media (max-width:560px){.tiles{grid-template-columns:1fr}}
@@ -44,7 +44,7 @@ html:has(body.dark){background:#000}
 body.dark{background:#000;color:#fff;min-height:100vh}
 body.dark #gate{background:#000;color:#fff}body.dark #gate p{color:#9a9a9a}body.dark #gate input{background:#151515;border-color:#333;color:#fff}
 body.dark header.top .brand{color:#fff}
-body.dark header.top nav a{color:#9a9a9a}body.dark header.top nav a:hover,body.dark header.top nav a.on{color:#fff}
+body.dark header.top nav a{color:#9a9a9a}body.dark header.top nav a:hover,body.dark header.top nav a.on,body.dark header.top nav span.on{color:#fff}
 body.dark footer{color:#8a8a8a}
 body.dark .tile{background:#111}
 /* project pages: two columns */

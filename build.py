@@ -4,7 +4,8 @@ V=str(int(time.time()))
 NAV=[("work","index.html","Work"),("lead","leadership.html","Leadership"),("about","about.html","About"),("contact","contact.html","Contact")]
 def shell(title, body, on, depth=0, dark=False):
     r="../" if depth else ""; ON=' class="on"'
-    nav="".join(f'<li><a href="{r}{h}"{ON if k==on else ""}>{t}</a></li>' for k,h,t in NAV)
+    landing=(on=="work" and not depth)
+    nav="".join((f'<li><span class="on">{t}</span></li>' if (landing and k=="work") else f'<li><a href="{r}{h}"{ON if k==on else ""}>{t}</a></li>') for k,h,t in NAV)
     brand='<span class="brand">Kevin Ellis</span>' if (on=="work" and not depth) else f'<a class="brand" href="{r}index.html">Kevin Ellis</a>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
