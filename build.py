@@ -61,19 +61,11 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p>Action List became the one universal worklist pattern across the whole EHR: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>
 <p class="demo"><b>Clickthrough demo</b> <span class="pending">link to come</span></p>'''),
  # ------------------------------------------------------------ case 2
- ("",'''<h2 class="part">Experience Core, and the AI workflow behind it</h2>
-<p class="case-lede">A platform design team that did not exist, and a workflow that cut concept-to-prototype from weeks to days.</p>'''),
- (fig(org(),"One platform team between the product organizations and engineering."),
-  '''<p>Every product organization designed its own lists, panels, and layouts. A universal pattern needs a universal owner. I made the case for Experience Core, staffed it, and aligned it in sequence: pillar leads, then SVP peers, then the top.</p>'''),
- (fig(journey(),"Thirty-four patterns, six stages, ownership by stretch of journey."),
-  '''<p>Thirty-four inherited patterns, no structure. I grouped them by the clinician's journey and gave each designer a stretch of journey rather than a pile of components.</p>'''),
- (fig(pipeline(),"Intent in, prototype out, customers in the loop."),
-  '''<p>The comp stopped being the deliverable; the rules did. Components get guidelines; layouts and patterns get skills, which carry the judgment of when, when not, and how. Intent in, working prototype out.</p>'''),
- (fig(gates(),"Three stages, three gates, one definition of done for every layout."),
-  '''<p>A written definition of done, three gates and a release approval, ended the misalignment that kept layouts from landing. WCAG 2.1 AA is a gate, not a hope.</p>'''),
- (img("../img/oracle/codex-learning-day.jpg","Learning day. Every designer shipped a working prototype in one session."),
-  '''<dl class="kv"><dt>My role</dt><dd>Proposed the team, built it, lead it. Wrote the first skills and ran the learning day.</dd>
-<dt>Next time</dt><dd>The definition of done before the first layout, not after the first misalignment.</dd></dl>'''),
+ ("",'<h2 class="part">Experience Core</h2>'),
+ (fig(journey(),"Thirty-four patterns, six stages of the clinician’s journey, ownership by stretch of journey."),
+  '''<p>Oracle Health already had a patterns team and a shared goal of one design language. What it lacked was structure: thirty-four patterns, several managers, no single thread of ownership.</p>
+<p>I rebuilt the team around the clinician’s journey instead of the pattern list. Six segments, each with a lead designer and research partner who own their segment, end to end. We called ourselves Experience Core.</p>
+<p>The team runs on six habits. Concepts, components, and guidelines define what we make. Cadence, governance, and evangelism define how we work. Guidance lives where the work lives, not in redlines, but in a living, coded reference app.</p>'''),
  # ------------------------------------------------------------ case 3
  ("",'''<h2 class="part">AI-native UX: where the system speaks, and where it stops</h2>
 <p class="case-lede">One set of rules for how, and how much, the system talks to a clinician.</p>'''),
