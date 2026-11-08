@@ -159,7 +159,7 @@ pages["leadership.html"]=shell("How I Lead",'<article class="case wrap">'+row(
 
 pages["about.html"]=shell("About",'<article class="case wrap">'+row('<img class="headshot" src="img/headshot-600.jpg" alt="Kevin Ellis">',
  '''<h1>About</h1>
-<p class="lede">Design leader and inventor. Named on eight AI-centric patent applications filed by Oracle.</p>
+<p class="lede">Design leader and inventor. Named on nine AI-centric patent applications filed by Oracle.</p>
 <p>I grew up in Alaska drawing and painting. I studied graphic design at California College of the Arts in San Francisco, then human-computer interaction and electronic communication design at Emily Carr University in Vancouver. My first digital work was for an agency in Reykjav&iacute;k, then Copenhagen, then back to San Francisco for design leadership roles at Adobe, Yahoo, Nokia, and eventually my own agency with partners in Copenhagen.</p>
 <p>The agency built proof-of-concept work that large clients turned into real products. I missed the client side and joined the biggest of them, Amazon, in 2015. Seven years there, then eBay, now Oracle Health, where I built the platform design organization for the clinical products.</p>
 <p>I have 15+ years building and running product design and research organizations across marketplace, commerce, and enterprise software. I design for human needs, whether the person is a customer or an employee using the company's own tools. I owned the seller experience end to end at eBay, where my team shipped eBay's first generative AI feature; led consumer product design at Amazon; and now run a platform design org at Oracle Health. I build teams, set the operating model, and ship outcomes with Product and Engineering as equal partners.</p>
