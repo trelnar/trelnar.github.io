@@ -146,7 +146,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
  (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","Fire Phone for Amazon. THANK YOU Studio reel, sound on.",loop=False),""),
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
  (img("../img/earlier/toyota.jpg","Design explorations for Toyota's native in-car navigation system. THANK YOU Studio."),""),
- (img("../img/earlier/nokia.jpg","At Nokia, one focus of my team was the creation of 3rd-party app reference designs for the N9 in the debut of the innovative MeeGo OS. (pictured: AccuWeather, Qik, Associated Press and Facebook)"),""),
+ (img("../img/earlier/nokia.jpg","At Nokia, one focus of my team was the creation of 3rd-party app reference designs for the N9 in the debut of the innovative MeeGo OS. (pictured: Associated Press, Qik, AccuWeather, and Facebook)"),""),
  (img("../img/earlier/adobe-cs3.jpg","Creative Suite 3 was a merger of Macromedia and Adobe brands under one roof, so the site underwent a radical transformation to showcase the new look, and provide more content space to celebrate the creative expression of the tools."),""),
  (img("../img/earlier/adobe-cs5.jpg","By CS5, we were pushing beyond the concept of a web page, introducing immersive landing screens with layers, motion and highly interactive UI to allow visitors to play with the tools."),""),
  ],("ebay.html","eBay"),("../leadership.html","Leadership"),herocap="Design explorations for Toyota's native in-car navigation system."),"work",1)
