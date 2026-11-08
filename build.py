@@ -56,19 +56,19 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 <p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams.</p>''',
  "2024 to present","oracle",[
  # ------------------------------------------------------------ case 1
- ("",'<h2 class="part">From Inbox to Action List</h2>'),
  (img("../img/oracle/action-list.png","From many disparate views, into one."),
-  '''<p>What started as a fix for the clinician inbox is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>'''),
+  '''<h2>From Inbox to Action List</h2>
+<p>What started as a fix for the clinician inbox is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>'''),
  # ------------------------------------------------------------ case 2
- ("",'<h2 class="part">Experience Core</h2>'),
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician’s journey. The team is organized the same way."),
-  '''<p>Oracle Health already had a patterns team and a shared goal of one design language. What it lacked was structure: thirty-four patterns, several managers, no single thread of ownership.</p>
+  '''<h2>Experience Core</h2>
+<p>Oracle Health already had a patterns team and a shared goal of one design language. What it lacked was structure: thirty-four patterns, several managers, no single thread of ownership.</p>
 <p>I rebuilt the team around the clinician’s journey instead of the pattern list. Six segments, each with a lead designer and research partner who own their segment, end to end. We called ourselves Experience Core.</p>
 <p>The team runs on six habits. Concepts, components, and guidelines define what we make. Cadence, governance, and evangelism define how we work. Guidance lives where the work lives, not in redlines, but in a living, coded reference app.</p>'''),
  # ------------------------------------------------------------ case 3
- ("",'<h2 class="part">From intent to working code</h2>'),
  (img("../img/oracle/ai-ux-platform.png","The platform, end to end: intent in, guidelines and context pulled from the design system, a spec and a working prototype out, triaged to the right team. Click to enlarge.",href="../img/oracle/ai-ux-platform.png"),
-  '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
+  '''<h2>From intent to working code</h2>
+<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
 <p>Going from concept to testable prototype has gone from weeks to days, and every team now works from the same source of truth.</p>'''),
  (img("../img/oracle/learning-day.jpg","Learning day. Every designer left with a working prototype. Click to enlarge.",href="../img/oracle/learning-day.jpg"),
   '''<p>AI talk in tech has come rapid-fire, and for most people it has been overwhelming. The way through is always together, and it’s even better when it’s fun. We gather everyone for regular team collaborations with no product work, no clinical constraints, a made-up brief for each team, and one rule: ship a working prototype by day’s end. Be silly, be free, be together.</p>'''),
