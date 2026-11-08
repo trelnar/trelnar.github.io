@@ -56,7 +56,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  # ------------------------------------------------------------ case 1
  ("",'<h2 class="part">From Inbox to Action List</h2>'),
  (img("../img/oracle/action-list.png","From many disparate views, into one."),
-  '''<p>What started as a fix for the clinician inbox, Action List is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>'''),
+  '''<p>What started as a fix for the clinician inbox is now Oracle Health’s universal work list pattern across the entire EHR platform: every role, every workflow, from ambulatory, acute, patient administration, rev cycle and reimbursements. One place to see the work and do it, instead of a different queue in every corner of the product.</p>'''),
  # ------------------------------------------------------------ case 2
  ("",'<h2 class="part">Experience Core</h2>'),
  (video("../img/oracle/journey.mp4","../img/oracle/journey-poster.jpg","Thirty-four patterns, grouped by where they sit in the clinician’s journey. The team is organized the same way."),
