@@ -53,7 +53,7 @@ pages["index.html"]=shell("Kevin Ellis, Design Leadership",'<div class="wrap"><d
 pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
 '''<p class="lede">Director, User Experience Design, 2024 to present.</p>
 <p>I joined Oracle Health to lead the design of the core task-management experience for an AI-native EHR. It started with ambulatory clinical workflows and grew into one universal pattern for every role across the whole product. Out of that work I formed Experience Core, our platform design team, and built its AI workflows with engineering, which took concept-to-testable-prototype from weeks to days. That work produced eight AI patent applications I am a named inventor on.</p>
-<p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams: no screens, no internal names, no customers.</p>''',
+<p class="caveat">Most of this is unreleased, so the cases are told through method and diagrams.</p>''',
  "2024 to present","oracle",[
  # ------------------------------------------------------------ case 1
  ("",'<h2 class="part">From Inbox to Action List</h2>'),
@@ -68,9 +68,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
  # ------------------------------------------------------------ case 3
  ("",'<h2 class="part">From intent to working code</h2>'),
  (img("../img/oracle/ai-ux-platform.png","The platform, end to end: intent in, guidelines and context pulled from the design system, a spec and a working prototype out, triaged to the right team. Click to enlarge.",href="../img/oracle/ai-ux-platform.png"),
-  '''<p>The handoff was the slow part. Designers made comps, wrote specs, and waited; engineers rebuilt what the comps implied and guessed at the rest.</p>
-<p>We rebuilt the process around a shared platform instead. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
-<p>Concept to testable prototype went from weeks to days, and every team now works from the same source of truth.</p>'''),
+  '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
