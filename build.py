@@ -144,7 +144,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
 </ul>''',
  "2006 to 2015","earlier",[
  (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","At THANK YOU, we conceived a unique design system for Amazon’s Fire Phone. It took advantage of the device’s 3D interface where depth offered real advantages, and used the best of flat design everywhere else, so the 3D moments stood out. Reel, sound on.",loop=False),""),
- (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
+ (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Three sizes of Kindle Fire HD, one launch site built to show the hardware and the differences between them. Minimal copy let the devices and the Kindle graphics shine, and our rigged and lit 3D scenes let Amazon re-shoot every size for any format. THANK YOU Studio, 2012."),""),
  (img("../img/earlier/toyota.jpg","Design explorations for Toyota's native in-car navigation system. THANK YOU Studio."),""),
  (img("../img/earlier/nokia.jpg","At Nokia, one focus of my team was the creation of 3rd-party app reference designs for the N9 in the debut of the innovative MeeGo OS. (pictured: Associated Press, Qik, AccuWeather, and Facebook)"),""),
  (img("../img/earlier/adobe-cs3.jpg","Creative Suite 3 was a merger of Macromedia and Adobe brands under one roof, so the site underwent a radical transformation to showcase the new look, and provide more content space to celebrate the creative expression of the tools."),""),
