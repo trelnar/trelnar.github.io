@@ -71,7 +71,7 @@ pages["work/oracle.html"]=shell("Oracle Health",case("Oracle Health",
   '''<p>Instead of handing off Figma comps, specs and guidelines to our partners, we’ve reimagined our design process around a shared platform. The design system’s components, layouts, guidelines, and guardrails live in one place that designers and the AI tooling both read from. A designer states an intent, the platform pulls in the right context, and the result is a spec and a working prototype in the same pass, routed to the right team.</p>
 <p>Going from concept to testable prototype has gone from weeks to days, and every team now works from the same source of truth.</p>'''),
  (img("../img/oracle/learning-day.jpg","Learning day. Every designer left with a working prototype. Click to enlarge.",href="../img/oracle/learning-day.jpg"),
-  '''<p>AI talk in tech has come rapid-fire, and for a lot of people it is overwhelming. The way through is together: get the team in a room, have some fun with the tools, and get comfortable before it counts. We did that, and this is what came out of it.</p>'''),
+  '''<p>AI talk in tech has come rapid-fire, and for most people it has been overwhelming. The way through is always together, and it’s even better when it’s fun. We gather everyone for regular team collaborations with no product work, no clinical constraints, a made-up brief for each team, and one rule: ship a working prototype by day’s end. Be silly, be free, be together.</p>'''),
  ],("../index.html","Work"),("amazon.html","Amazon")),"work",1)
 
 pages["work/amazon.html"]=shell("Amazon",case("Amazon",
