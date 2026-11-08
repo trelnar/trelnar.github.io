@@ -143,7 +143,7 @@ pages["work/earlier.html"]=shell("Earlier Work",case("Earlier Work",
 <li><b>Work</b> Kindle Fire launch and Fire Phone design system for Amazon. Toyota in-car navigation. MeeGo OS design system and third-party app guidelines. Adobe.com redesign.</li>
 </ul>''',
  "2006 to 2015","earlier",[
- (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","Fire Phone for Amazon. THANK YOU Studio reel, sound on.",loop=False),""),
+ (video("../img/earlier/firephone-reel.mp4","../img/earlier/firephone-reel-poster-2.jpg","At THANK YOU, we conceived a unique design system for Amazon’s Fire Phone. It took advantage of the device’s 3D interface where depth offered real advantages, and used the best of flat design everywhere else, so the 3D moments stood out. Reel, sound on.",loop=False),""),
  (slides([f"../img/earlier/fire-{i}.jpg" for i in range(1,13)],"Kindle Fire HD launch site for Amazon. THANK YOU Studio, 2012."),""),
  (img("../img/earlier/toyota.jpg","Design explorations for Toyota's native in-car navigation system. THANK YOU Studio."),""),
  (img("../img/earlier/nokia.jpg","At Nokia, one focus of my team was the creation of 3rd-party app reference designs for the N9 in the debut of the innovative MeeGo OS. (pictured: Associated Press, Qik, AccuWeather, and Facebook)"),""),
