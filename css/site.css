@@ -23,6 +23,8 @@ p{margin:0 0 14px}
 figure{margin:28px 0}
 figure img{width:100%;height:auto;display:block;background:var(--card)}
 figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+figcaption b.co{font-weight:600;color:#4a4a4a}
+@media (prefers-color-scheme: dark){figcaption b.co{color:#c8c8c8}}
 .slot{aspect-ratio:16/9;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;background:var(--card)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
